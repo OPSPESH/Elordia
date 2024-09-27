@@ -24,7 +24,7 @@ end
 
 function L.give_coords(collection)
 	if collection == "village" then
-		return table.remove(coords, 0)
+		return coords
 	end
 end
 return L

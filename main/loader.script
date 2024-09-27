@@ -3,7 +3,7 @@ local l = require "main.loader"
 function init(self)
 	self.current_screen = "#my_house_upstairs"
 	self.ids = collectionfactory.create("#my_house_upstairs")
-	go.set_position("/m_char")
+	print(l.give_coords("village"))
 end
 
 function on_message(self, message_id, message, sender)
