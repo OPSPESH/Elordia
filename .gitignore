@@ -1,4 +1,8 @@
 /.internal
 /build
+/.vscode
+/degugger
 .DS_Store
 Thumbs.db
+debugger/debugger.lua
+debugger/debugger.script

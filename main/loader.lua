@@ -22,4 +22,9 @@ function L.collection_go_ids(collection)
 	end
 end
 
+function L.give_coords(collection)
+	if collection == "village" then
+		return table.remove(coords, 0)
+	end
+end
 return L
