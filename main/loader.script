@@ -1,0 +1,39 @@
+local l = require "main.loader"
+
+function init(self)
+	self.current_screen = "#my_house_upstairs"
+	self.ids = collectionfactory.create("#my_house_upstairs")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("load_level") then
+		self.collection = l.give_collection()
+		if self.collection == nil then 
+			return
+		elseif self.collection == "#village" then
+			msg.post("/transition#transition", "play")
+			timer.delay(0.6, false, function ()
+				go.delete(self.ids)
+				self.ids = collectionfactory.create(l.give_collection())
+				self.current_screen = l.give_collection()
+				-- move m_char
+			end)
+		elseif self.collection == "#my_house_downstairs" then
+			msg.post("/transition#transition", "play")
+			timer.delay(0.6, false, function ()
+				go.delete(self.ids)
+				self.ids = collectionfactory.create(l.give_collection())
+				self.current_screen = l.give_collection()
+				-- move m_char
+			end)
+		elseif self.collection == "#my_house_upstairs" then
+			msg.post("/transition#transition", "play")
+			timer.delay(0.6, false, function ()
+				go.delete(self.ids)
+				self.ids = collectionfactory.create(l.give_collection())
+				self.current_screen = l.give_collection()
+				-- move m_char
+			end)
+		end
+	end
+end

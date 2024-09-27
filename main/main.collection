@@ -1,0 +1,70 @@
+name: "main"
+instances {
+  id: "m_char"
+  prototype: "/main/m_char/m_char.go"
+  position {
+    z: 1.0
+  }
+}
+instances {
+  id: "camera"
+  prototype: "/orthographic/camera.go"
+  component_properties {
+    id: "script"
+    properties {
+      id: "zoom"
+      value: "1.5"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "projection"
+      value: "FIXED_AUTO"
+      type: PROPERTY_TYPE_HASH
+    }
+    properties {
+      id: "follow"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "follow_target"
+      value: "/m_char"
+      type: PROPERTY_TYPE_HASH
+    }
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "transition"
+  data: "components {\n"
+  "  id: \"transition\"\n"
+  "  component: \"/assets/transition/transition.gui\"\n"
+  "}\n"
+  ""
+}
+embedded_instances {
+  id: "worlds"
+  data: "components {\n"
+  "  id: \"loader\"\n"
+  "  component: \"/main/loader.script\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"village\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/village/village.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"my_house_downstairs\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/village/houses/my_house_downstairs.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  "embedded_components {\n"
+  "  id: \"my_house_upstairs\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/village/houses/my_house_upstairs.collection\\\"\\n"
+  "\"\n"
+  "}\n"
+  ""
+}

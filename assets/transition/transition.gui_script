@@ -1,0 +1,12 @@
+function on_message(self, message_id, message, sender)
+	-- calls the node we will be editing "box"
+	local node = gui.get_node("box") 
+	
+	if message_id == hash("play") then
+		-- animates it to fully visible
+		gui.animate(node, "color.w", 1, gui.EASING_LINEAR, 0.5, 0, function ()
+			gui.animate(node, "color.w", 0, gui.EASING_LINEAR, 0.5, 1)
+		end)
+	end
+end
+

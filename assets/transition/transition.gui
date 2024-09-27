@@ -1,0 +1,19 @@
+script: "/assets/transition/transition.gui_script"
+textures {
+  name: "black_square"
+  texture: "/assets/village/signs/black_square.tilesource"
+}
+nodes {
+  position {
+    x: 475.0
+    y: 325.0
+  }
+  type: TYPE_BOX
+  texture: "black_square/anim"
+  id: "box"
+  inherit_alpha: true
+  alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

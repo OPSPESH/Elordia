@@ -1,0 +1,50 @@
+script: "/assets/village/signs/sign.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "black_square"
+  texture: "/assets/village/signs/black_square.tilesource"
+}
+nodes {
+  position {
+    x: 251.0
+    y: 444.0
+  }
+  size {
+    x: 400.0
+    y: 200.0
+  }
+  type: TYPE_BOX
+  texture: "black_square/anim"
+  id: "box"
+  inherit_alpha: true
+  alpha: 0.5
+  visible: false
+}
+nodes {
+  position {
+    x: 251.0
+    y: 444.0
+    z: 1.0
+  }
+  scale {
+    x: 2.5
+    y: 2.5
+  }
+  size {
+    x: 400.0
+    y: 200.0
+  }
+  type: TYPE_TEXT
+  text: "The sign says -\n"
+  "This is you house\n"
+  "<------\n"
+  ""
+  font: "default"
+  id: "text"
+  visible: false
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

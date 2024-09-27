@@ -1,0 +1,118 @@
+local l = require "main.loader"
+
+function init(self)
+	self.speed = 75
+
+	msg.post(".", "acquire_input_focus")
+
+	-- what animation is playing
+	self.current_anim = nil
+
+	-- something to do with collision
+	self.dir = vmath.vector3()
+	self.correction = vmath.vector3()
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function update(self, dt)
+	-- check whether the charicter is colliding with anything every tick --
+	
+	if vmath.length_sqr(self.dir) > 1 then
+		self.dir = vmath.normalize(self.dir)
+	end
+
+	self.correction = vmath.vector3()
+
+	local p = go.get_position()
+	go.set_position(p + self.dir * self.speed * dt)
+	
+	-- animation control -- 
+	
+	-- sets which animation plays if no movement
+	local anim = hash("idle")
+
+	-- sets which anim plays if walking
+	if self.speed == 75 then
+		if self.dir.y > 0 then
+			anim = hash("walk_up")
+		elseif self.dir.y < 0 then
+			anim = hash("walk_down")
+		elseif self.dir.x > 0 then
+			anim = hash("walk_right")
+		elseif self.dir.x < 0 then
+			anim = hash("walk_left")
+		end
+
+	-- sets which animation plays if sprinting 
+	elseif self.speed == 125 then
+		if self.dir.y > 0 then
+			anim = hash("run_up")
+		elseif self.dir.y < 0 then
+			anim = hash("run_down")
+		elseif self.dir.x > 0 then
+			anim = hash("run_right")
+		elseif self.dir.x < 0 then
+			anim = hash("run_left")
+		end
+	end
+
+	-- actually plays the animation
+	if anim ~= self.current_anim then
+		sprite.play_flipbook("#sprite", anim)
+		self.current_anim = anim
+	end
+	self.dir = vmath.vector3()
+end
+
+function on_message(self, message_id, message, sender)
+	-- decides what to do if you have collided with anything 
+	if message_id == hash("contact_point_response") and message.other_group == hash("barrier") then
+		if message.distance > 0 then
+			local proj = vmath.project(self.correction, message.normal * message.distance)
+			if proj < 1 then
+				local comp = (message.distance - message.distance * proj) * message.normal
+				go.set_position(go.get_position() + comp)
+				self.correction = self.correction + comp
+			end
+		end
+	end
+
+	if message_id == hash("trigger_response") then
+		-- communicates with village_logic.script
+		if message.other_group == hash("my_house") and message.enter == true then 
+			l.get_collection("#my_house_downstairs")
+		elseif message.other_group == hash("my_house") and message.enter == false then 
+			l.get_collection(nil)
+		end
+	end
+end
+
+function on_input(self, action_id, action)
+	-- check whether walking or running
+	if action_id == hash("sprint") then
+		if action.released ~= true then
+			self.speed = 125
+		else
+			self.speed = 75
+		end
+	end
+
+	-- moves the charicter
+	if action_id == hash("up") then
+		self.dir.y = 1
+	elseif action_id == hash("down") then
+		self.dir.y = -1
+	elseif action_id == hash("left") then
+		self.dir.x = -1
+	elseif action_id == hash("right") then
+		self.dir.x = 1
+	end
+
+	if action_id == hash("action") then
+		msg.post("/worlds#loader", "load_level")
+	end 
+end
+
