@@ -1,5 +1,9 @@
 local l = require "main.loader"
 
+local village = vmath.vector3(385,447,1)
+local my_house_downstairs = vmath.vector3(31,124,1)
+local my_house_upstairs = vmath.vector3(32,110,1)
+
 function init(self)
 	self.speed = 75
 
@@ -11,6 +15,7 @@ function init(self)
 	-- something to do with collision
 	self.dir = vmath.vector3()
 	self.correction = vmath.vector3()
+	self.colliding = false
 end
 
 function final(self)
@@ -81,11 +86,43 @@ function on_message(self, message_id, message, sender)
 	end
 
 	if message_id == hash("trigger_response") then
-		-- communicates with village_logic.script
-		if message.other_group == hash("my_house") and message.enter == true then 
-			l.get_collection("#my_house_downstairs")
-		elseif message.other_group == hash("my_house") and message.enter == false then 
-			l.get_collection(nil)
+		-- says when colliding to do an event 
+		if message.other_group == hash("load_my_house") then
+			if message.enter == true then 
+				l.give_collection("#my_house_downstairs")
+				self.colliding = true
+			elseif message.enter == false then
+				self.colliding = false
+			end
+		end
+
+		if message.other_group == hash("load_my_house_upstairs") then
+			if message.enter ==  true then
+				l.give_collection("#my_house_upstairs")
+				self.colliding = true
+			elseif message.enter == false then
+				self.colliding = false
+			end
+		end
+
+		if message.other_group == hash("load_village") then
+			if message.enter ==  true then
+				l.give_collection("#village")
+				self.colliding = true
+			elseif message.enter == false then
+				self.colliding = false
+			end
+		end
+	end
+
+	if message_id == hash("update_pos") then
+		self.pos = table.remove(message)
+		if self.pos == "my_house_downstairs" then
+			go.set_position(my_house_downstairs, ".")
+		elseif self.pos == "my_house_upstairs" then
+			go.set_position(my_house_upstairs)
+		elseif self.pos == "village" then
+			go.set_position(village)
 		end
 	end
 end
@@ -111,8 +148,9 @@ function on_input(self, action_id, action)
 		self.dir.x = 1
 	end
 
-	if action_id == hash("action") then
+	if action_id == hash("action") and self.colliding then
 		msg.post("/worlds#loader", "load_level")
+		self.colliding = false
 	end 
 end
 

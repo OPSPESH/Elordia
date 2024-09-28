@@ -2,38 +2,55 @@ local l = require "main.loader"
 
 function init(self)
 	self.current_screen = "#my_house_upstairs"
-	self.ids = collectionfactory.create("#my_house_upstairs")
-	print(l.give_coords("village"))
+	self.ids = collectionfactory.create(self.current_screen)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("load_level") then
-		self.collection = l.give_collection()
+		-- getss the collection to be loaded
+		self.collection = l.get_collection()
 		if self.collection == nil then 
 			return
-		elseif self.collection == "#village" then
-			msg.post("/transition#transition", "play")
-			timer.delay(0.6, false, function ()
-				go.delete(self.ids)
-				self.ids = collectionfactory.create(l.give_collection())
-				self.current_screen = l.give_collection()
-				-- move m_char
-			end)
 		elseif self.collection == "#my_house_downstairs" then
+			-- fades the screen
 			msg.post("/transition#transition", "play")
-			timer.delay(0.6, false, function ()
+			-- waits for it to be a black screen
+			timer.delay(0.5, false, function ()
+				-- deltes the old screen
 				go.delete(self.ids)
-				self.ids = collectionfactory.create(l.give_collection())
-				self.current_screen = l.give_collection()
-				-- move m_char
+				--spawns the new screen 
+				self.ids = collectionfactory.create(l.get_collection())
+				self.current_screen = l.get_collection()
+				-- tells the player to move 
+				msg.post("/m_char", "update_pos", {"my_house_downstairs"})
 			end)
-		elseif self.collection == "#my_house_upstairs" then
+
+		elseif self.collection == "#village" then
+			-- fades the screen
 			msg.post("/transition#transition", "play")
-			timer.delay(0.6, false, function ()
+			-- waits for it to be a black screen
+			timer.delay(0.5, false, function ()
+				-- deltes the old screen
 				go.delete(self.ids)
-				self.ids = collectionfactory.create(l.give_collection())
-				self.current_screen = l.give_collection()
-				-- move m_char
+				--spawns the new screen 
+				self.ids = collectionfactory.create(l.get_collection())
+				self.current_screen = l.get_collection()
+				-- tells the player to move 
+				msg.post("/m_char", "update_pos", {"village"})
+			end)
+
+		elseif self.collection == "#my_house_upstairs" then
+			-- fades the screen
+			msg.post("/transition#transition", "play")
+			-- waits for it to be a black screen
+			timer.delay(0.5, false, function ()
+				-- deltes the old screen
+				go.delete(self.ids)
+				--spawns the new screen 
+				self.ids = collectionfactory.create(l.get_collection())
+				self.current_screen = l.get_collection()
+				-- tells the player to move 
+				msg.post("/m_char", "update_pos", {"my_house_upstairs"})
 			end)
 		end
 	end

@@ -3,6 +3,8 @@ instances {
   id: "m_char"
   prototype: "/main/m_char/m_char.go"
   position {
+    x: 131.0
+    y: 32.0
     z: 1.0
   }
 }
