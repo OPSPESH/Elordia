@@ -873,7 +873,7 @@ embedded_instances {
   "\"\n"
   "}\n"
   "embedded_components {\n"
-  "  id: \"load_my_house\"\n"
+  "  id: \" load_my_house\"\n"
   "  type: \"collisionobject\"\n"
   "  data: \"type: COLLISION_OBJECT_TYPE_TRIGGER\\n"
   "mass: 0.0\\n"
