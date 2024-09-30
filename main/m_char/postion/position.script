@@ -1,5 +1,6 @@
 local defsave = require("defsave.defsave")
 
+local collection 
 function init(self)
 	defsave.appname = "Realms_of_elordia"
 	defsave.default_data = require("main.m_char.postion.default_position")
@@ -11,11 +12,22 @@ function final(self)
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("update_pos") then
-		if table.remove(message) == "village" then
-			self.loaded = defsave.get("position", "village")
-			print(self.loaded)
-			go.set_position(self.loaded)
+	if message_id == hash("save_pos") then
+		if collection == nil then
+			return
+		else 
+			defsave.set("position", collection, go.get_position())
+		end
+	end
+	
+	if message_id == hash("load_pos") then
+		collection = table.remove(message)
+		if collection == "village" then
+			go.set_position(defsave.get("position", "village"))
+		elseif collection == "my_house_downstairs" then
+			go.set_position(defsave.get("position", "my_house_downstairs"))
+		elseif collection == "my_house_upstairs" then
+			go.set_position(defsave.get("position", "my_house_upstairs"))
 		end
 	end
 end

@@ -22,7 +22,8 @@ function on_message(self, message_id, message, sender)
 				self.ids = collectionfactory.create(l.get_collection())
 				self.current_screen = l.get_collection()
 				-- tells the player to move 
-				msg.post("/m_char", "update_pos", {"my_house_downstairs"})
+				msg.post("m_char#position", "save_pos")
+				msg.post("/m_char#position", "load_pos", {"my_house_downstairs"})
 			end)
 
 		elseif self.collection == "#village" then
@@ -36,7 +37,8 @@ function on_message(self, message_id, message, sender)
 				self.ids = collectionfactory.create(l.get_collection())
 				self.current_screen = l.get_collection()
 				-- tells the player to move 
-				msg.post("/m_char#position","update_pos", {"village"})
+				msg.post("m_char#position", "save_pos")
+				msg.post("/m_char#position","load_pos", {"village"})
 			end)
 
 		elseif self.collection == "#my_house_upstairs" then
@@ -50,7 +52,8 @@ function on_message(self, message_id, message, sender)
 				self.ids = collectionfactory.create(l.get_collection())
 				self.current_screen = l.get_collection()
 				-- tells the player to move 
-				msg.post("/m_char", "update_pos", {"my_house_upstairs"})
+				msg.post("m_char#position", "save_pos")
+				msg.post("/m_char#position", "load_pos", {"my_house_upstairs"})
 			end)
 		end
 	end
