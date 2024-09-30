@@ -2,6 +2,10 @@ components {
   id: "m_char_script"
   component: "/main/m_char/m_char.script"
 }
+components {
+  id: "position"
+  component: "/main/m_char/postion/position.script"
+}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"

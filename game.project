@@ -1,8 +1,8 @@
 [project]
 title = Elordia
 version = 0.1
-dependencies#0 = https://github.com/Insality/defold-saver/archive/refs/tags/1.zip
-dependencies#1 = https://github.com/britzl/defold-orthographic/archive/refs/tags/3.3.2.zip
+dependencies#0 = https://github.com/britzl/defold-orthographic/archive/refs/tags/3.3.2.zip
+dependencies#1 = https://github.com/subsoap/defsave/archive/refs/tags/v1.2.6.zip
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -25,12 +25,6 @@ velocity_threshold = 100.0
 
 [tilemap]
 max_tile_count = 100000
-
-[saver]
-save_name = save.json
-autosave_timer = 3
-saver_key = saver
-storage_key = storage
 
 [windows]
 app_icon = /assets/ico/helmet.ico
