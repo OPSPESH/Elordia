@@ -4,7 +4,11 @@ embedded_instances {
   id: "level"
   data: "components {\n"
   "  id: \"level\"\n"
-  "  component: \"/assets/village/village.tilemap\"\n"
+  "  component: \"/assets/village/village/level.tilemap\"\n"
+  "  position {\n"
+  "    x: -46.0\n"
+  "    y: -64.0\n"
+  "  }\n"
   "}\n"
   "embedded_components {\n"
   "  id: \"barrier\"\n"
@@ -916,7 +920,7 @@ embedded_instances {
   id: "go"
   data: ""
   position {
-    x: 385.0
-    y: 447.0
+    x: 432.0
+    y: 513.0
   }
 }
