@@ -1,6 +1,7 @@
 local defsave = require("defsave.defsave")
 
 local collection 
+
 function init(self)
 	defsave.appname = "Realms_of_elordia"
 	defsave.default_data = require("main.m_char.postion.default_position")
