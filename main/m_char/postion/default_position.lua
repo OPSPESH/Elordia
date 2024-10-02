@@ -9,6 +9,11 @@ return {
 	player = {
 		collection = "#my_house_upstairs",
 		position = vmath.vector3(133,32,0.9995)
+	},
+
+	camera = {
+		my_house_downstairs = vmath.vector3(96, 120, 0),
+		my_house_upstairs = vmath.vector3(96, 96, 0)
 	}
 
 }
