@@ -1,4 +1,5 @@
 local l = require "main.loader"
+local defsave = require("defsave.defsave")
 
 function init(self)
 	self.speed = 75
@@ -12,9 +13,15 @@ function init(self)
 	self.dir = vmath.vector3()
 	self.correction = vmath.vector3()
 	self.colliding = false
+
+	defsave.appname = "Realms_of_elordia"
+	defsave.default_data = require("main.m_char.postion.default_position")
+	defsave.load("player")
+	go.set_position(defsave.get("player", "position"))
 end
 
 function final(self)
+	defsave.set("player", "position", go.get_position())
 	msg.post(".", "release_input_focus")
 end
 

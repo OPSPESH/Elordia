@@ -1,7 +1,10 @@
 local l = require "main.loader"
+local defsave = require("defsave.defsave")
 
 function init(self)
-	self.current_screen = "#my_house_upstairs"
+	defsave.appname = "Realms_of_elordia"
+
+	self.current_screen = defsave.get("player", "collection")
 	self.ids = collectionfactory.create(self.current_screen)
 end
 
@@ -24,6 +27,7 @@ function on_message(self, message_id, message, sender)
 				-- tells the player to move 
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position", "load_pos", {"my_house_downstairs"})
+				defsave.set("player", "collection", self.current_screen)
 			end)
 
 		elseif self.collection == "#village" then
@@ -39,6 +43,7 @@ function on_message(self, message_id, message, sender)
 				-- tells the player to move 
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position","load_pos", {"village"})
+				defsave.set("player", "collection", self.current_screen)
 			end)
 
 		elseif self.collection == "#my_house_upstairs" then
@@ -54,6 +59,7 @@ function on_message(self, message_id, message, sender)
 				-- tells the player to move 
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position", "load_pos", {"my_house_upstairs"})
+				defsave.set("player", "collection", self.current_screen)
 			end)
 		end
 	end

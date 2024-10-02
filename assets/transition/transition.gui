@@ -1,7 +1,7 @@
 script: "/assets/transition/transition.gui_script"
 textures {
   name: "black_square"
-  texture: "/assets/village/signs/black_square.tilesource"
+  texture: "/assets/black_square/black_square.tilesource"
 }
 nodes {
   position {

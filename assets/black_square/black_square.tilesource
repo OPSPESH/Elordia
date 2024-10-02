@@ -1,4 +1,4 @@
-image: "/assets/village/signs/black_square.png"
+image: "/assets/black_square/black_square.png"
 tile_width: 1920
 tile_height: 1080
 collision_groups: "default"
