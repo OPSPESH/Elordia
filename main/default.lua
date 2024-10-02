@@ -8,7 +8,8 @@ return {
 
 	player = {
 		collection = "#my_house_upstairs",
-		position = vmath.vector3(133,32,0.9995)
+		position = vmath.vector3(133,32,0.9995),
+		sprint = false
 	},
 
 	camera = {

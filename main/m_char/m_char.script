@@ -1,7 +1,13 @@
 local l = require "main.loader"
 local defsave = require("defsave.defsave")
+local sprint
 
 function init(self)
+	defsave.appname = "Realms_of_elordia"
+	defsave.default_data = require("main.default")
+	defsave.load("player")
+	go.set_position(defsave.get("player", "position"))
+	
 	self.speed = 75
 
 	msg.post(".", "acquire_input_focus")
@@ -14,10 +20,7 @@ function init(self)
 	self.correction = vmath.vector3()
 	self.colliding = false
 
-	defsave.appname = "Realms_of_elordia"
-	defsave.default_data = require("main.default")
-	defsave.load("player")
-	go.set_position(defsave.get("player", "position"))
+	sprint = defsave.get("player", "sprint")
 end
 
 function final(self)
@@ -118,15 +121,27 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 
+	if message_id == hash("force_walk") then
+		self.message = table.remove(message)
+		if self.message == true then
+			sprint = true
+			defsave.set("player", "sprint", true)
+		elseif self.message == false then
+			sprint = false
+			defsave.set("player", "sprint", false)
+		end
+	end
 end
 
 function on_input(self, action_id, action)
 	-- check whether walking or running
 	if action_id == hash("sprint") then
-		if action.released ~= true then
-			self.speed = 125
-		else
-			self.speed = 75
+		if sprint == true then
+			if action.released ~= true then
+				self.speed = 125
+			else
+				self.speed = 75
+			end
 		end
 	end
 
