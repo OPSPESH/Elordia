@@ -35271,7 +35271,7 @@ layers {
 }
 layers {
   id: "trees_0"
-  z: 5.0E-4
+  z: 0.9996
   cell {
     x: 82
     y: 9
@@ -36365,7 +36365,7 @@ layers {
 }
 layers {
   id: "trees_4"
-  z: 6.0E-4
+  z: 0.9997
   cell {
     x: 83
     y: 19
@@ -36859,7 +36859,7 @@ layers {
 }
 layers {
   id: "trees_3"
-  z: 7.0E-4
+  z: 0.9998
   cell {
     x: 80
     y: 17
@@ -39258,7 +39258,7 @@ layers {
 }
 layers {
   id: "trees_2"
-  z: 8.0E-4
+  z: 0.9999
   cell {
     x: 79
     y: 15
@@ -41447,7 +41447,7 @@ layers {
 }
 layers {
   id: "tree_1"
-  z: 9.0E-4
+  z: 1.0
   cell {
     x: 76
     y: 13
