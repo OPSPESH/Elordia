@@ -56,5 +56,11 @@ embedded_instances {
   "  data: \"prototype: \\\"/main/village/houses/my_house_upstairs.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"weapon_store\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/village/houses/weapon_store.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }

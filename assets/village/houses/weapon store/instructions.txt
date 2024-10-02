@@ -1,0 +1,15 @@
+Hi there!
+
+Just a quick tutorial how to use your map in Defold!
+
+1. Extract the zip file content
+2. Select the 3 files: level.tilemap, tiles.tilesource and tilesheet.png
+3. Drag and drop them at the root of your Defold project
+
+Done!
+
+Feel free to ask anything on the Discord: https://discord.gg/8sCEAspmBV
+
+Have a nice day, and let's make some cool games!
+
+Hugo

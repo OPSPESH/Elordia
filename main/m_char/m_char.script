@@ -119,6 +119,15 @@ function on_message(self, message_id, message, sender)
 				self.colliding = false
 			end
 		end
+
+		if message.other_group == hash("load_weapon_store") then
+			if message.enter == true then
+				l.give_collection("weapon_store")
+				self.colliding = true
+			elseif message.enter == false then
+				self.colliding = false
+			end
+		end
 	end
 
 	if message_id == hash("force_walk") then

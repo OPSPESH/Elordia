@@ -32,7 +32,6 @@ app_icon = /assets/ico/helmet.ico
 [display]
 width = 1280
 height = 720
-fullscreen = 1
 
 [html5]
 cssfile = /builtins/manifests/web/dark_theme.css
