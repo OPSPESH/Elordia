@@ -4,7 +4,7 @@ components {
 }
 components {
   id: "position"
-  component: "/main/m_char/postion/position.script"
+  component: "/main/m_char/position.script"
 }
 components {
   id: "camera"

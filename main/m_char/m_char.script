@@ -15,7 +15,7 @@ function init(self)
 	self.colliding = false
 
 	defsave.appname = "Realms_of_elordia"
-	defsave.default_data = require("main.m_char.postion.default_position")
+	defsave.default_data = require("main.default")
 	defsave.load("player")
 	go.set_position(defsave.get("player", "position"))
 end
