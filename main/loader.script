@@ -1,11 +1,31 @@
 local l = require "main.loader"
 local defsave = require("defsave.defsave")
+local camera = require("orthographic.camera")
 
+local function cam(self)
+	self.collection = defsave.get("player", "collection")
+	print(self.collection)
+	if self.collection == "#village" then
+		camera.follow(nil, "/m_char")
+		camera.set_zoom(nil, 1.5)
+	elseif self.collection == "#my_house_downstairs" then
+		go.set_position(defsave.get("camera", "my_house_downstairs"), "/camera")
+		camera.unfollow(nil)
+		camera.set_zoom(nil, 2.5)
+	elseif self.collection == "#my_house_upstairs" then
+		go.set_position(defsave.get("camera", "my_house_upstairs"), "/camera")
+		camera.unfollow(nil)
+		camera.set_zoom(nil, 2.5)
+	end
+
+end
 function init(self)
 	defsave.appname = "Realms_of_elordia"
-
+	defsave.load("camera")
+	
 	self.current_screen = defsave.get("player", "collection")
 	self.ids = collectionfactory.create(self.current_screen)
+	cam(self)
 end
 
 function on_message(self, message_id, message, sender)
@@ -28,6 +48,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position", "load_pos", {"my_house_downstairs"})
 				defsave.set("player", "collection", self.current_screen)
+				cam(self)
 			end)
 
 		elseif self.collection == "#village" then
@@ -44,6 +65,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position","load_pos", {"village"})
 				defsave.set("player", "collection", self.current_screen)
+				cam(self)
 			end)
 
 		elseif self.collection == "#my_house_upstairs" then
@@ -60,6 +82,7 @@ function on_message(self, message_id, message, sender)
 				msg.post("m_char#position", "save_pos")
 				msg.post("/m_char#position", "load_pos", {"my_house_upstairs"})
 				defsave.set("player", "collection", self.current_screen)
+				cam(self)
 			end)
 		end
 	end

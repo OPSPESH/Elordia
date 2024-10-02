@@ -12,19 +12,9 @@ instances {
   component_properties {
     id: "script"
     properties {
-      id: "zoom"
-      value: "1.5"
-      type: PROPERTY_TYPE_NUMBER
-    }
-    properties {
       id: "projection"
       value: "FIXED_AUTO"
       type: PROPERTY_TYPE_HASH
-    }
-    properties {
-      id: "follow"
-      value: "true"
-      type: PROPERTY_TYPE_BOOLEAN
     }
     properties {
       id: "follow_target"
