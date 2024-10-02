@@ -6,6 +6,10 @@ components {
   id: "position"
   component: "/main/m_char/postion/position.script"
 }
+components {
+  id: "camera"
+  component: "/main/camera.script"
+}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"
