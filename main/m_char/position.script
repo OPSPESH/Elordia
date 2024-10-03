@@ -1,6 +1,6 @@
 local defsave = require("defsave.defsave")
 
-local collection 
+local collection = defsave.get("player", "collection")
 
 function init(self)
 	defsave.appname = "Realms_of_elordia"
@@ -14,11 +14,7 @@ end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("save_pos") then
-		if collection == nil then
-			return
-		else 
-			defsave.set("position", collection, go.get_position())
-		end
+		defsave.set("position", collection, go.get_position())
 	end
 	
 	if message_id == hash("load_pos") then
