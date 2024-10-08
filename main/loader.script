@@ -37,6 +37,8 @@ function on_message(self, message_id, message, sender)
 		self.collection = l.get_collection()
 		if self.collection == nil then 
 			return
+			print(self.collection)
+
 		elseif self.collection == "#my_house_downstairs" then
 			-- fades the screen
 			msg.post("/transition#transition", "play")
@@ -90,24 +92,24 @@ function on_message(self, message_id, message, sender)
 				cam(self)
 				msg.post("/m_char", "force_walk", {false})
 			end)
-		end
 
-	elseif self.collection == "#weapon_store" then
-		-- fades the screen
-		msg.post("/transition#transition", "play")
-		-- waits for it to be a black screen
-		timer.delay(0.5, false, function ()
-			-- deltes the old screen
-			go.delete(self.ids)
-			--spawns the new screen 
-			self.ids = collectionfactory.create(l.get_collection())
-			self.current_screen = l.get_collection()
-			-- tells the player to move 
-			msg.post("m_char#position", "save_pos")
-			msg.post("/m_char#position", "load_pos", {"weapon_store"})
-			defsave.set("player", "collection", self.current_screen)
-			cam(self)
-			msg.post("/m_char", "force_walk", {false})
-		end)
+		elseif self.collection == "#weapon_store" then
+			-- fades the screen
+			msg.post("/transition#transition", "play")
+			-- waits for it to be a black screen
+			timer.delay(0.5, false, function ()
+				-- deltes the old screen
+				go.delete(self.ids)
+				--spawns the new screen 
+				self.ids = collectionfactory.create(l.get_collection())
+				self.current_screen = l.get_collection()
+				-- tells the player to move 
+				msg.post("m_char#position", "save_pos")
+				msg.post("/m_char#position", "load_pos", {"weapon_store"})
+				defsave.set("player", "collection", self.current_screen)
+				cam(self)
+				msg.post("/m_char", "force_walk", {false})
+			end)
+		end
 	end
 end
