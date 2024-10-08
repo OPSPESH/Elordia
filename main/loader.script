@@ -6,7 +6,7 @@ local function cam(self)
 	self.collection = defsave.get("player", "collection")
 	if self.collection == "#village" then
 		camera.follow(nil, "/m_char")
-		camera.set_zoom(nil, 1.5)
+		camera.set_zoom(nil, 1.75)
 	elseif self.collection == "#my_house_downstairs" then
 		go.set_position(defsave.get("camera", "my_house_downstairs"), "/camera")
 		camera.unfollow(nil)
