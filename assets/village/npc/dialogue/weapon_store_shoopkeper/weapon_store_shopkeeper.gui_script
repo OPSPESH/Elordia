@@ -1,0 +1,52 @@
+local printer = require("printer.printer")
+local styles = require("assets.village.npc.dialogue.styles")
+
+local function show_inventory(self)
+	print("poo")
+end
+
+local function next_print(self)
+	gui.set_visible(gui.get_node("template/text_parent"), true)
+	gui.set_visible(gui.get_node("template/prefab"), true)
+	self.printer:print("Welcome to my shop!")
+	timer.delay(1.5, false, function ()
+		self.printer:print("What would you like to buy?")
+		timer.delay(1.5, false, function ()
+			gui.set_visible(gui.get_node("template/text_parent"), false)
+			gui.set_visible(gui.get_node("template/prefab"), false)
+			self.printer:clear()
+			show_inventory(self)
+		end)
+	end)
+end
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	-- printer module setup
+	printer.add_styles(styles)
+	printer.play_sound = function(name)
+		sound.play("sounds#" .. name)
+	end
+	
+	self.printer = printer.new(self, "template")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("play_dialogue") then
+		msg.post("/m_char", "release_input_focus")
+		next_print(self)
+	end
+end
+
+function final(self)
+	self.printer:final()
+end
+
+
+function update(self, dt)
+	self.printer:update(dt)
+end
+
+function on_input(self, action_id, action)
+end 

@@ -19,6 +19,7 @@ embedded_components {
   "mask: \"load_my_house_upstairs\"\n"
   "mask: \"load_village\"\n"
   "mask: \"load_weapon_store\"\n"
+  "mask: \"weapon_store_shopkeeper\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
