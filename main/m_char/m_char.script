@@ -148,6 +148,10 @@ function on_message(self, message_id, message, sender)
 			defsave.set("player", "sprint", false)
 		end
 	end
+
+	if message_id == hash("dialogue_url") then
+		self.dialogue_url = table.remove(message)
+	end
 end
 
 function on_input(self, action_id, action)
@@ -177,7 +181,7 @@ function on_input(self, action_id, action)
 		if self.colliding == "load_world" then
 			msg.post("/worlds#loader", "load_level")
 		elseif self.colliding == "weapon_store_shopkeeper" then
-			msg.post("main:/collection0/npc_0#weapon_store_shopkeeper", "play_dialogue")
+			msg.post(self.dialogue_url, "play", {"dialogue_1"})
 		end
 		self.colliding = false
 	end 

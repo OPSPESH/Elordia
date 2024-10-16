@@ -28,6 +28,7 @@ function init(self)
 	
 	self.current_screen = defsave.get("player", "collection")
 	self.ids = collectionfactory.create(self.current_screen)
+	l.get_id(self.ids)
 	cam(self)
 end
 
@@ -55,6 +56,7 @@ function on_message(self, message_id, message, sender)
 				defsave.set("player", "collection", self.current_screen)
 				cam(self)
 				msg.post("/m_char", "force_walk", {false})
+				l.get_id(self.ids)
 			end)
 
 		elseif self.collection == "#village" then
@@ -73,6 +75,7 @@ function on_message(self, message_id, message, sender)
 				defsave.set("player", "collection", self.current_screen)
 				cam(self)
 				msg.post("/m_char", "force_walk", {true})
+				l.get_id(self.ids)
 			end)
 
 		elseif self.collection == "#my_house_upstairs" then
@@ -91,6 +94,7 @@ function on_message(self, message_id, message, sender)
 				defsave.set("player", "collection", self.current_screen)
 				cam(self)
 				msg.post("/m_char", "force_walk", {false})
+				l.get_id(self.ids)
 			end)
 
 		elseif self.collection == "#weapon_store" then
@@ -109,6 +113,7 @@ function on_message(self, message_id, message, sender)
 				defsave.set("player", "collection", self.current_screen)
 				cam(self)
 				msg.post("/m_char", "force_walk", {false})
+				l.get_id(self.ids)
 			end)
 		end
 	end
