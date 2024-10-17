@@ -1,33 +1,48 @@
 local defarc = require "defarc.defarc"
+local printer = require "printer.printer"
+local styles = require("assets.village.npc.dialogue.styles")
 
+local function dialogue_1(self)
+	local node = gui.get_node("dialogue/box")
 
-local function dialogue_1()
+	gui.set_enabled(node, true)
 	msg.post("main:/m_char", "release_input_focus")
-	gui.set_enabled(gui.get_node("box"), true)
-
-	local node = gui.get_node("text")
-	
-	gui.set_text(node, defarc.get_text(defarc.select_element("me")))
-	timer.delay(1.5, false, function ()
-		gui.set_text(node, defarc.get_text(defarc.select_element("shopkeeper")))
-		timer.delay(1.5, false, function ()
-			gui.set_enabled(gui.get_node("box"), false)
+	self.printer:print(defarc.get_text(defarc.select_element("0")))
+	timer.delay(2, false, function ()
+		self.printer:print(defarc.get_text(defarc.select_element("1")))
+		timer.delay(2, false, function ()
+			gui.set_enabled(node, false)
+			printer.clear(self.printer)
 			msg.post("main:/m_char", "acquire_input_focus")
 		end)
 	end)
 end 
 
 function init(self)
+	msg.post("main:/m_char", "dialogue_url", {msg.url()})
+
 	defarc.load("/res/dialogue/weapon_store_shopkeeper.json")
 
-	msg.post("main:/m_char", "dialogue_url", {msg.url()})
+	printer.add_styles(styles)
+	printer.play_sound = function(name)
+		sound.play("sounds#" .. name)
+	end
+	self.printer = printer.new(self, "dialogue")
+end
+
+function final(self)
+	self.printer:final()
+end
+
+function update(self, dt)
+	self.printer:update(dt)
 end
 
 function on_message(self, message_id, message, sender)
 	if message_id == hash("play") then 
 		self.message = table.remove(message)
 		if self.message == "dialogue_1" then
-			dialogue_1()
+			dialogue_1(self)
 		end
 	end
 end

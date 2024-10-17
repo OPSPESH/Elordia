@@ -1,48 +1,59 @@
 script: "/assets/village/npc/dialogue/weapon_store_shopkeeper/dialogue.gui_script"
-fonts {
-  name: "game"
-  font: "/assets/fonts/game.font"
-}
 textures {
   name: "grey_square"
   texture: "/assets/squares/grey/grey_square.tilesource"
 }
 nodes {
   position {
-    x: 781.0
-    y: 346.0
+    x: 820.0
+    y: 329.0
   }
-  scale {
-    x: 0.2
-    y: 0.1
-  }
-  type: TYPE_BOX
-  texture: "grey_square/anim"
-  id: "box"
+  type: TYPE_TEMPLATE
+  id: "dialogue"
   inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
+  template: "/printer/printer.gui"
 }
 nodes {
   position {
-    x: 10.000011
-    y: 21.000006
+    x: -115.0
+    y: 52.0
   }
   scale {
-    x: 9.519221
-    y: 16.462017
+    x: 0.15
+    y: 0.15
   }
-  size {
-    x: 200.0
-    y: 100.0
-  }
+  type: TYPE_BOX
+  texture: "grey_square/anim"
+  id: "dialogue/box"
+  parent: "dialogue"
+  overridden_fields: 1
+  overridden_fields: 3
+  overridden_fields: 9
+  overridden_fields: 45
+  template_node_child: true
+  enabled: false
+}
+nodes {
+  type: TYPE_BOX
+  id: "dialogue/text_parent"
+  parent: "dialogue"
+  template_node_child: true
+}
+nodes {
   type: TYPE_TEXT
-  text: "Hello world\n"
-  ""
-  font: "game"
-  id: "text"
+  id: "dialogue/prefab"
   line_break: true
-  parent: "box"
-  inherit_alpha: true
+  parent: "dialogue"
+  overridden_fields: 18
+  template_node_child: true
+}
+nodes {
+  type: TYPE_BOX
+  id: "dialogue/prefab_icon"
+  parent: "dialogue"
+  alpha: 0.0
+  overridden_fields: 30
+  template_node_child: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

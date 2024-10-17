@@ -26,18 +26,19 @@
     "elements": {
         "ccdeaad1-6814-406f-a1f8-9c95b3602fa9": {
             "theme": "cyan",
-            "title": "<p>me<\/p>",
-            "content": "<p>Hello.<\/p>",
+            "title": "<p>0<\/p>",
+            "content": "<p>Hello!<\/p><p>Welcome to my shop?<\/p>",
             "outputs": [
                 "b45e1aa6-ab9a-4b3c-b25c-5f4eb023b120"
             ],
+            "attributes": [],
             "autoHeight": true,
             "components": []
         },
         "1dac4e19-dfb3-4df2-8f6d-789e23781171": {
             "theme": "default",
-            "title": "<p>shopkeeper<\/p>",
-            "content": "<p>Hello! <br>Welcome to my shop. <br>What would you like to buy<\/p>",
+            "title": "<p>1<\/p>",
+            "content": "<p> What would you like to buy<\/p>",
             "outputs": [],
             "autoHeight": true,
             "components": []
