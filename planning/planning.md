@@ -60,3 +60,13 @@ Factions’ Symbols:
 Aureate Imperium: A golden sun with radiating beams.
 Starfall Brotherhood: A falling star, leaving a trail of light.
 The Vermillion Bazaar: An intertwined pair of black serpents, representing secrecy and cunning.
+
+
+
+
+
+Opening Scene
+Village Name: Eldenvale, a peaceful and picturesque place surrounded by rolling hills and dense forests.
+Protagonist’s Home: A modest, cozy house where the mercenary lives with their family, showcasing a simpler life before the chaos.
+First Mission: The mercenary is called away from their peaceful life by an urgent message. This mission offers a glimpse of their skills and the stakes of the larger conflict.
+Village Setting: Eldenvale’s tranquility, close-knit community, and rustic charm highlight what’s at risk as the plot unfolds.
