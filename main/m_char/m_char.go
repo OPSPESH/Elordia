@@ -44,7 +44,7 @@ embedded_components {
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/assets/m_char/m_char.tilesource\"\n"
+  "  texture: \"/assets/m_char/m_char.atlas\"\n"
   "}\n"
   ""
   position {

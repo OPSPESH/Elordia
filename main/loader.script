@@ -1,4 +1,4 @@
-local l = require "main.loader"
+local l = require("main.loader")
 local defsave = require("defsave.defsave")
 local camera = require("orthographic.camera")
 
@@ -25,7 +25,8 @@ end
 function init(self)
 	defsave.appname = "Realms_of_elordia"
 	defsave.load("camera")
-	
+	defsave.load("npc")
+
 	self.current_screen = defsave.get("player", "collection")
 	self.ids = collectionfactory.create(self.current_screen)
 	l.get_id(self.ids)
@@ -41,6 +42,7 @@ function on_message(self, message_id, message, sender)
 			print(self.collection)
 
 		elseif self.collection == "#my_house_downstairs" then
+			
 			-- fades the screen
 			msg.post("/transition#transition", "play")
 			-- waits for it to be a black screen
