@@ -42,26 +42,10 @@ end
 
 
 -- inventory
-
-You
-try again
-Copilot
-In Act 1, Scene 4 of "Macbeth," Shakespeare explores Macbeth's mounting fears through his inner turmoil and aside. When King Duncan names his son Malcolm as the Prince of Cumberland, Macbeth perceives a direct threat to his ambitions for the throne. His aside reveals his dread at the obstacles in his path and hints at his dark intentions: he acknowledges that he must either surrender to fate or take drastic measures to achieve his desires. This scene vividly captures Macbeth's escalating anxiety and moral conflict, setting the stage for his eventual descent into regicide and madness.
-
-
-
-
-You
-write me some code for a inventory gui system in defold. you can use librarys
-Copilot
-Sure thing! Here’s a simple inventory GUI system for Defold using the Defold GUI system and Lua scripting.
-
 Inventory GUI Layout
 Open your Defold project.
 
 Create a new GUI file for the inventory (e.g., inventory.gui).
-
-In the inventory.gui, add GUI nodes for the inventory slots and items.
 
 Script for the Inventory System
 Create a new script (e.g., inventory.script) to manage the inventory logic.
@@ -70,7 +54,7 @@ lua
 
 Copy
 -- inventory.script
-
+```
 local inventory = {}
 
 function init(self)
@@ -108,6 +92,7 @@ function add_item_to_inventory(self, item)
 end
 
 return inventory
+```
 GUI Node Setup
 In the inventory.gui, create a template for an inventory slot:
 Add a box node and name it slot_template.
@@ -117,9 +102,11 @@ Example Initialization in main.script
 To use the inventory system, make sure to initialize it in your main script:
 
 -- main.script
-
+```
 function init(self)
     msg.post("inventory#inventory", "init")
 end
+```
+
 Connecting the GUI
 Link the inventory.gui to your inventory.script and ensure the templates are properly named (slot_template and slot_item_template).
