@@ -44,15 +44,10 @@ end
 -- inventory
 Inventory GUI Layout
 Open your Defold project.
-
 Create a new GUI file for the inventory (e.g., inventory.gui).
-
 Script for the Inventory System
 Create a new script (e.g., inventory.script) to manage the inventory logic.
 
-lua
-
-Copy
 -- inventory.script
 ```
 local inventory = {}
