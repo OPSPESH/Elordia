@@ -1,4 +1,5 @@
 -- combat 
+```
 -- combat.script
 local characters = require("characters")
 
@@ -37,6 +38,7 @@ function on_input(self, action_id, action)
         end
     end
 end
+```
 
 
 -- inventory
