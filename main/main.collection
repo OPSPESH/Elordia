@@ -64,3 +64,11 @@ embedded_instances {
   "}\n"
   ""
 }
+embedded_instances {
+  id: "inventory"
+  data: "components {\n"
+  "  id: \"inventory\"\n"
+  "  component: \"/main/m_char/inventory/inventory.gui\"\n"
+  "}\n"
+  ""
+}

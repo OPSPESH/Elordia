@@ -1,0 +1,29 @@
+local defsave = require("defsave.defsave")
+
+local function currency(self)
+	self.node = gui.get_node("gold")
+	gui.set_text(self.node, defsave.get("player", "gold"))
+
+	self.node = gui.get_node("star_shard")
+	print(defsave.get("player", "gold"))
+	gui.set_text(self.node, defsave.get("player", "starshard"))
+	
+end
+
+local function update(self)
+	currency(self)
+end
+
+function init(self)
+	defsave.appname = "Realms_of_elordia"
+end
+
+function on_message(self, message_id, message, sender)
+	local node = gui.get_node("inventory")
+	if message_id == hash("show") then 
+		update(self)
+		gui.set_enabled(node, true)
+	elseif message_id == hash("hide") then 
+		gui.set_enabled(node, false)
+	end
+end

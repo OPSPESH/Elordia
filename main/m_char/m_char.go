@@ -6,6 +6,10 @@ components {
   id: "position"
   component: "/main/m_char/position.script"
 }
+components {
+  id: "inventory"
+  component: "/main/m_char/inventory/inventory.gui"
+}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"

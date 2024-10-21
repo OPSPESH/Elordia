@@ -1,0 +1,55 @@
+script: "/main/m_char/inventory/inventory.gui_script"
+fonts {
+  name: "triforce"
+  font: "/assets/font/triforce/triforce.font"
+}
+textures {
+  name: "inventory"
+  texture: "/assets/m_char/inventory/inventory.atlas"
+}
+nodes {
+  position {
+    x: 640.0
+    y: 360.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/inventory"
+  id: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  enabled: false
+}
+nodes {
+  position {
+    x: -4.0
+    y: -263.0
+  }
+  size {
+    x: 50.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "triforce"
+  id: "gold"
+  parent: "inventory"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -4.0
+    y: -306.0
+  }
+  size {
+    x: 50.0
+    y: 30.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "triforce"
+  id: "star_shard"
+  parent: "inventory"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

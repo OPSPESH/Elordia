@@ -9,6 +9,7 @@ function init(self)
 	go.set_position(defsave.get("player", "position"))
 	
 	self.speed = 75
+	self.inventory = 0
 
 	msg.post(".", "acquire_input_focus")
 
@@ -159,34 +160,50 @@ function on_message(self, message_id, message, sender)
 end
 
 function on_input(self, action_id, action)
+	if action_id == hash("inventory") and action.released then 
+		if self.inventory == 0 then 
+			msg.post("/inventory", "show")
+			timer.delay(0.5, false, function ()
+				self.inventory = 1	
+			end)
+		elseif self.inventory == 1 then 
+			msg.post("/inventory", "hide")
+			timer.delay(0.5, false, function ()
+				self.inventory = 0
+			end)
+		end
+	end
+	
+	if self.inventory == 0 then 
 	-- check whether walking or running
-	if action_id == hash("sprint") then
-		if sprint == true then
-			if action.released ~= true then
-				self.speed = 125
-			else
-				self.speed = 75
+		if action_id == hash("sprint") then
+			if sprint == true then
+				if action.released ~= true then
+					self.speed = 125
+				else
+					self.speed = 75
+				end
 			end
 		end
-	end
 
-	-- moves the charicter
-	if action_id == hash("up") then
-		self.dir.y = 1
-	elseif action_id == hash("down") then
-		self.dir.y = -1
-	elseif action_id == hash("left") then
-		self.dir.x = -1
-	elseif action_id == hash("right") then
-		self.dir.x = 1
-	end
-
-	if action_id == hash("action") and self.colliding ~= false then
-		if self.colliding == "load_world" then
-			msg.post("/worlds#loader", "load_level")
-		elseif self.colliding == "weapon_store_shopkeeper" then
-			msg.post(self.dialogue_url, "play", {"dialogue_1"})
+		-- moves the charicter
+		if action_id == hash("up") then
+			self.dir.y = 1
+		elseif action_id == hash("down") then
+			self.dir.y = -1
+		elseif action_id == hash("left") then
+			self.dir.x = -1
+		elseif action_id == hash("right") then
+			self.dir.x = 1
 		end
-		self.colliding = false
-	end 
+
+		if action_id == hash("action") and self.colliding ~= false then
+			if self.colliding == "load_world" then
+				msg.post("/worlds#loader", "load_level")
+			elseif self.colliding == "weapon_store_shopkeeper" then
+				msg.post(self.dialogue_url, "play", {"dialogue_1"})
+			end
+			self.colliding = false
+		end
+	end
 end

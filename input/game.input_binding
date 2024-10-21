@@ -42,7 +42,39 @@ key_trigger {
   input: KEY_RIGHT
   action: "right"
 }
+key_trigger {
+  input: KEY_E
+  action: "inventory"
+}
 mouse_trigger {
   input: MOUSE_BUTTON_LEFT
   action: "touch"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_UP
+  action: "up"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_RIGHT
+  action: "right"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_LEFT
+  action: "left"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_DOWN
+  action: "down"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_DOWN
+  action: "action"
+}
+gamepad_trigger {
+  input: GAMEPAD_LSTICK_DOWN
+  action: "sprint"
+}
+gamepad_trigger {
+  input: GAMEPAD_RPAD_LEFT
+  action: "inventory"
 }
