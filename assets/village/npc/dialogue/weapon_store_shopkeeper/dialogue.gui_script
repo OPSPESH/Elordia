@@ -3,7 +3,7 @@ local printer = require "printer.printer"
 local styles = require("assets.village.npc.dialogue.styles")
 
 local function dialogue_1(self)
-	local node = gui.get_node("dialogue/box")
+	local node = gui.get_node("box")
 
 	gui.set_enabled(node, true)
 	msg.post("main:/m_char", "release_input_focus")

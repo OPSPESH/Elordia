@@ -1,0 +1,4 @@
+images {
+  image: "/assets/items/red.png"
+}
+extrude_borders: 2

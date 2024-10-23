@@ -1,7 +1,22 @@
 script: "/assets/village/npc/dialogue/weapon_store_shopkeeper/dialogue.gui_script"
 textures {
   name: "grey_square"
-  texture: "/assets/squares/grey/grey_square.tilesource"
+  texture: "/assets/squares/squares.atlas"
+}
+nodes {
+  position {
+    x: 665.0
+    y: 402.0
+  }
+  scale {
+    x: 0.1
+    y: 0.1
+  }
+  type: TYPE_BOX
+  texture: "grey_square/grey_square"
+  id: "box"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
@@ -14,26 +29,6 @@ nodes {
   template: "/printer/printer.gui"
 }
 nodes {
-  position {
-    x: -117.0
-    y: 49.0
-  }
-  scale {
-    x: 0.15
-    y: 0.15
-  }
-  type: TYPE_BOX
-  texture: "grey_square/anim"
-  id: "dialogue/box"
-  parent: "dialogue"
-  overridden_fields: 1
-  overridden_fields: 3
-  overridden_fields: 9
-  overridden_fields: 45
-  template_node_child: true
-  enabled: false
-}
-nodes {
   type: TYPE_BOX
   id: "dialogue/text_parent"
   parent: "dialogue"
@@ -42,17 +37,13 @@ nodes {
 nodes {
   type: TYPE_TEXT
   id: "dialogue/prefab"
-  line_break: true
   parent: "dialogue"
-  overridden_fields: 18
   template_node_child: true
 }
 nodes {
   type: TYPE_BOX
   id: "dialogue/prefab_icon"
   parent: "dialogue"
-  alpha: 0.0
-  overridden_fields: 30
   template_node_child: true
 }
 material: "/builtins/materials/gui.material"

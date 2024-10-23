@@ -1,7 +1,7 @@
 script: "/assets/transition/transition.gui_script"
 textures {
   name: "black_square"
-  texture: "/assets/squares/black/black_square.tilesource"
+  texture: "/assets/squares/squares.atlas"
 }
 nodes {
   position {
@@ -9,7 +9,7 @@ nodes {
     y: 325.0
   }
   type: TYPE_BOX
-  texture: "black_square/anim"
+  texture: "black_square/black_square"
   id: "box"
   inherit_alpha: true
   alpha: 0.0

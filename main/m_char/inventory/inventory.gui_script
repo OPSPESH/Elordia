@@ -1,5 +1,22 @@
 local defsave = require("defsave.defsave")
 
+local function grid(self)
+	local proto = gui.get_node("template/box")
+	self.pos = vmath.vector3(346, 580, 0)
+	self.size = vmath.vector3(4, 4, 1)
+	local nodes = {}
+
+	for o = 1,6 do
+		for i = 1,9 do
+			self.node = gui.clone(proto)
+			gui.set_position(self.node, self.pos)
+			table.insert(nodes, self.node)
+			self.pos = self.pos + vmath.vector3(72, 0, 0)
+		end
+		self.pos = self.pos - vmath.vector3(648, 72, 0)
+	end
+end
+
 local function currency(self)
 	self.node = gui.get_node("gold")
 	gui.set_text(self.node, defsave.get("player", "gold"))
@@ -7,11 +24,11 @@ local function currency(self)
 	self.node = gui.get_node("star_shard")
 	print(defsave.get("player", "gold"))
 	gui.set_text(self.node, defsave.get("player", "starshard"))
-	
 end
 
 local function update(self)
 	currency(self)
+	grid(self)
 end
 
 function init(self)
@@ -20,10 +37,13 @@ end
 
 function on_message(self, message_id, message, sender)
 	local node = gui.get_node("inventory")
+	local node1 = gui.get_node("template/box")
 	if message_id == hash("show") then 
-		update(self)
 		gui.set_enabled(node, true)
+		gui.set_enabled(node1, true)
+		update(self)
 	elseif message_id == hash("hide") then 
 		gui.set_enabled(node, false)
+		gui.set_enabled(node1, false)
 	end
 end

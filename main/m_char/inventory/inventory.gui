@@ -51,5 +51,34 @@ nodes {
   parent: "inventory"
   inherit_alpha: true
 }
+nodes {
+  position {
+    x: 346.0
+    y: 580.0
+  }
+  type: TYPE_TEMPLATE
+  id: "template"
+  inherit_alpha: true
+  template: "/main/m_char/inventory/proto.gui"
+}
+nodes {
+  position {
+    x: -467.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/red"
+  id: "template/box"
+  parent: "template"
+  overridden_fields: 1
+  overridden_fields: 3
+  overridden_fields: 9
+  overridden_fields: 45
+  template_node_child: true
+  enabled: false
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

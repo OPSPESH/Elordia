@@ -1,0 +1,7 @@
+images {
+  image: "/assets/squares/black/black_square.png"
+}
+images {
+  image: "/assets/squares/grey/grey_square.png"
+}
+extrude_borders: 2
