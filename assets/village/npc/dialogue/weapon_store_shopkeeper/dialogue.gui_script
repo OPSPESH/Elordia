@@ -1,5 +1,5 @@
-local defarc = require "defarc.defarc"
-local printer = require "printer.printer"
+local defarc = require("defarc.defarc")
+local printer = require("printer.printer")
 local styles = require("assets.village.npc.dialogue.styles")
 
 local function dialogue_1(self)
@@ -21,7 +21,7 @@ end
 function init(self)
 	msg.post("main:/m_char", "dialogue_url", {msg.url()})
 
-	defarc.load("/res/dialogue/weapon_store_shopkeeper.json")
+	defarc.load("/res/dialogue/weapon_store_shopkeeker.json")
 
 	printer.add_styles(styles)
 	printer.play_sound = function(name)

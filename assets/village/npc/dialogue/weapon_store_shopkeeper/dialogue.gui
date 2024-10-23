@@ -5,11 +5,11 @@ textures {
 }
 nodes {
   position {
-    x: 665.0
+    x: 708.0
     y: 402.0
   }
   scale {
-    x: 0.1
+    x: 0.15
     y: 0.1
   }
   type: TYPE_BOX
@@ -17,6 +17,7 @@ nodes {
   id: "box"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
 }
 nodes {
   position {
