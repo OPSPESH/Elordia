@@ -4,8 +4,8 @@ textures {
 }
 nodes {
   scale {
-    x: 2.0
-    y: 2.0
+    x: 4.0
+    y: 4.0
   }
   type: TYPE_BOX
   texture: "items/red"
