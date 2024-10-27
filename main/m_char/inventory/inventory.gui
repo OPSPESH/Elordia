@@ -7,6 +7,10 @@ textures {
   name: "inventory"
   texture: "/assets/m_char/inventory/inventory.atlas"
 }
+textures {
+  name: "squares"
+  texture: "/assets/squares/squares.atlas"
+}
 nodes {
   position {
     x: 640.0

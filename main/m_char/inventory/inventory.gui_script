@@ -28,7 +28,7 @@ end
 
 local function update(self)
 	currency(self)
-	grid(self)
+	-- grid(self)
 end
 
 function init(self)
