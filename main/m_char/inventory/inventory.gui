@@ -11,6 +11,23 @@ textures {
   name: "squares"
   texture: "/assets/squares/squares.atlas"
 }
+textures {
+  name: "items"
+  texture: "/assets/items/items.atlas"
+}
+nodes {
+  position {
+    x: 640.0
+    y: 360.0
+  }
+  type: TYPE_BOX
+  texture: "squares/black_square"
+  id: "box"
+  inherit_alpha: true
+  alpha: 0.5
+  size_mode: SIZE_MODE_AUTO
+  enabled: false
+}
 nodes {
   position {
     x: 640.0
@@ -57,27 +74,403 @@ nodes {
 }
 nodes {
   position {
-    x: 346.0
-    y: 580.0
+    x: -494.0
+    y: 206.0
   }
-  type: TYPE_TEMPLATE
-  id: "template"
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "slot"
+  parent: "inventory"
   inherit_alpha: true
-  template: "/main/m_char/inventory/proto.gui"
+  size_mode: SIZE_MODE_AUTO
+  visible: false
 }
 nodes {
   position {
-    x: -467.0
+    x: 220.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
   }
   type: TYPE_BOX
-  texture: "items/red"
-  id: "template/box"
-  parent: "template"
-  overridden_fields: 1
-  overridden_fields: 9
-  overridden_fields: 45
-  template_node_child: true
-  enabled: false
+  texture: "items/blank"
+  id: "0"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 327.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "1"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 432.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "2"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 539.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "3"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 644.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "4"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 751.0
+    y: -9.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "5"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 220.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "6"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 327.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "7"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 432.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "8"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 539.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "9"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 644.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "10"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 751.0
+    y: -115.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "11"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 220.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "12"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 327.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "13"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 432.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "14"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 539.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "15"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 644.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "16"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 751.0
+    y: -221.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "17"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 220.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "18"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 327.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "19"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 432.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "20"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 539.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "21"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 644.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "22"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 751.0
+    y: -328.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "23"
+  parent: "slot"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

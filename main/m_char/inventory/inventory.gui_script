@@ -1,43 +1,44 @@
 local defsave = require("defsave.defsave")
 
-local function grid(self)
-	local proto = gui.get_node("template/box")
-	self.pos = vmath.vector3(346, 580, 0)
-	self.size = vmath.vector3(4, 4, 1)
-	local nodes = {}
+local loaded = 0
 
-	for o = 1,6 do
-		for i = 1,9 do
-			self.node = gui.clone(proto)
-			gui.set_position(self.node, self.pos)
-			table.insert(nodes, self.node)
-			self.pos = self.pos + vmath.vector3(72, 0, 0)
+local function items(self)
+	for i = 0,23 do
+		self.i = "s"..i
+		local node = gui.get_node(i)
+		gui.set_texture(node, "items")
+		if defsave.get("inventory", self.i) == "nul" then
+			gui.play_flipbook(node, "blank")
+		else 
+			gui.play_flipbook(node, "missing")
 		end
-		self.pos = self.pos - vmath.vector3(648, 72, 0)
 	end
 end
 
 local function currency(self)
 	self.node = gui.get_node("gold")
-	gui.set_text(self.node, defsave.get("player", "gold"))
-
+	gui.set_text(self.node, defsave.get("inventory", "gold"))
 	self.node = gui.get_node("star_shard")
-	print(defsave.get("player", "gold"))
-	gui.set_text(self.node, defsave.get("player", "starshard"))
+	gui.set_text(self.node, defsave.get("inventory", "starshard"))
 end
 
 local function update(self)
 	currency(self)
-	-- grid(self)
+	items(self)
 end
 
 function init(self)
-	defsave.appname = "Realms_of_elordia"
+	if loaded == 0 then
+		defsave.appname = "Realms_of_elordia"
+		defsave.default_data = require("main.default")
+		defsave.load("inventory")
+		loaded = 1
+	end
 end
 
 function on_message(self, message_id, message, sender)
 	local node = gui.get_node("inventory")
-	local node1 = gui.get_node("template/box")
+	local node1 = gui.get_node("box")
 	if message_id == hash("show") then 
 		gui.set_enabled(node, true)
 		gui.set_enabled(node1, true)
