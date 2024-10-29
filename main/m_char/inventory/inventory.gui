@@ -13,7 +13,7 @@ textures {
 }
 textures {
   name: "items"
-  texture: "/assets/items/items.atlas"
+  texture: "/items.atlas"
 }
 nodes {
   position {
@@ -31,7 +31,7 @@ nodes {
 nodes {
   position {
     x: 640.0
-    y: 360.0
+    y: 362.0
   }
   type: TYPE_BOX
   texture: "inventory/inventory"
@@ -75,14 +75,14 @@ nodes {
 nodes {
   position {
     x: -494.0
-    y: 206.0
+    y: 210.0
   }
   size {
     x: 200.0
     y: 100.0
   }
   type: TYPE_BOX
-  id: "slot"
+  id: "t"
   parent: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
@@ -100,9 +100,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "0"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t0"
+  parent: "0"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -116,9 +135,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "1"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t1"
+  parent: "1"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -132,9 +170,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "2"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t2"
+  parent: "2"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -148,9 +205,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "3"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t3"
+  parent: "3"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -164,9 +240,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "4"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t4"
+  parent: "4"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -180,9 +275,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "5"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t5"
+  parent: "5"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -196,9 +310,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "6"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t6"
+  parent: "6"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -212,9 +345,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "7"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t7"
+  parent: "7"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -228,9 +380,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "8"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t8"
+  parent: "8"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -244,9 +415,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "9"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t9"
+  parent: "9"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -260,9 +450,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "10"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t10"
+  parent: "10"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -276,9 +485,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "11"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t11"
+  parent: "11"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -292,9 +520,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "12"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t12"
+  parent: "12"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -308,9 +555,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "13"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t13"
+  parent: "13"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -324,9 +590,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "14"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t14"
+  parent: "14"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -340,9 +625,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "15"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t15"
+  parent: "15"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -356,9 +660,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "16"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t16"
+  parent: "16"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -372,9 +695,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "17"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t17"
+  parent: "17"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -388,9 +730,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "18"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t18"
+  parent: "18"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -404,9 +765,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "19"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t19"
+  parent: "19"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -420,9 +800,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "20"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t20"
+  parent: "20"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -436,9 +835,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "21"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t21"
+  parent: "21"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -452,9 +870,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "22"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t22"
+  parent: "22"
+  inherit_alpha: true
 }
 nodes {
   position {
@@ -468,9 +905,28 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "23"
-  parent: "slot"
+  parent: "t"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.25
+    y: -7.0
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 20.0
+    y: 10.0
+  }
+  type: TYPE_TEXT
+  font: "triforce"
+  id: "t23"
+  parent: "23"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

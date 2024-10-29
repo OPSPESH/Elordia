@@ -1,17 +1,35 @@
 local defsave = require("defsave.defsave")
-
+local item = require("main.m_char.inventory.items")
 local loaded = 0
 
 local function items(self)
+
+	for i = 0,23 do 
+		self.i = "s"..i
+		self.ia = "s"..i.."a"
+		local slot = defsave.get("inventory", self.i)
+		if slot == "nul" then 
+			defsave.set("inventory", self.ia, 0)
+		end
+	end
+	
 	for i = 0,23 do
 		self.i = "s"..i
 		local node = gui.get_node(i)
+		local slot = defsave.get("inventory", self.i)
 		gui.set_texture(node, "items")
-		if defsave.get("inventory", self.i) == "nul" then
-			gui.play_flipbook(node, "blank")
+		gui.play_flipbook(node, item.items(slot))
+	end
+
+	for i = 0,23 do 
+		self.i = "s"..i.."a"
+		local node = gui.get_node("t"..i)
+		local slot = defsave.get("inventory", self.i)
+		if slot == 0 then
+			gui.set_text(node, "") 
 		else 
-			gui.play_flipbook(node, "missing")
-		end
+			gui.set_text(node, slot)
+		end 
 	end
 end
 
