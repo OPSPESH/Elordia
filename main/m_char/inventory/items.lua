@@ -70,4 +70,12 @@ function m.items(slot)
 	end
 end
 
+function m.equipment(slot)
+	if slot == "nul" then
+		return "blank"
+	else 
+		return "missing"
+	end
+end
+
 return m

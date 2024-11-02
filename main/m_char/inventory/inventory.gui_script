@@ -2,29 +2,24 @@ local defsave = require("defsave.defsave")
 local item = require("main.m_char.inventory.items")
 local loaded = 0
 
-local function items(self)
-
-	for i = 0,23 do 
-		self.i = "s"..i
-		self.ia = "s"..i.."a"
-		local slot = defsave.get("inventory", self.i)
+local function items()
+	for i  = 0,19 do 
+		local slot = defsave.get("inventory", "s"..i)
 		if slot == "nul" then 
-			defsave.set("inventory", self.ia, 0)
+			defsave.set("inventory", "s"..i.."a", 0)
 		end
 	end
-	
-	for i = 0,23 do
-		self.i = "s"..i
-		local node = gui.get_node(i)
-		local slot = defsave.get("inventory", self.i)
+
+	for i = 0,19 do
+		local node = gui.get_node("s"..i)
+		local slot = defsave.get("inventory", "s"..i)
 		gui.set_texture(node, "items")
 		gui.play_flipbook(node, item.items(slot))
 	end
 
-	for i = 0,23 do 
-		self.i = "s"..i.."a"
+	for i = 0,19 do 
 		local node = gui.get_node("t"..i)
-		local slot = defsave.get("inventory", self.i)
+		local slot = defsave.get("inventory", "s"..i.."a")
 		if slot == 0 then
 			gui.set_text(node, "") 
 		else 
@@ -33,16 +28,26 @@ local function items(self)
 	end
 end
 
+local function equipment()
+	for i = 0,4 do 
+		local node = gui.get_node("e"..i)
+		local slot = defsave.get("inventory", "e"..i)
+		gui.set_texture(node, "items")
+		gui.play_flipbook(node, item.items(slot))
+	end
+end
+
 local function currency(self)
-	self.node = gui.get_node("gold")
-	gui.set_text(self.node, defsave.get("inventory", "gold"))
-	self.node = gui.get_node("star_shard")
-	gui.set_text(self.node, defsave.get("inventory", "starshard"))
+	local node = gui.get_node("gold")
+	gui.set_text(node, defsave.get("inventory", "gold"))
+	node = gui.get_node("star_shard")
+	gui.set_text(node, defsave.get("inventory", "starshard"))
 end
 
 local function update(self)
-	currency(self)
-	items(self)
+	-- currency(self)
+	items()
+	equipment()
 end
 
 function init(self)
@@ -56,13 +61,10 @@ end
 
 function on_message(self, message_id, message, sender)
 	local node = gui.get_node("inventory")
-	local node1 = gui.get_node("box")
 	if message_id == hash("show") then 
 		gui.set_enabled(node, true)
-		gui.set_enabled(node1, true)
 		update(self)
 	elseif message_id == hash("hide") then 
 		gui.set_enabled(node, false)
-		gui.set_enabled(node1, false)
 	end
 end

@@ -86,7 +86,7 @@ images {
   image: "/assets/items/food/peach.png"
 }
 images {
-  image: "/assets/items/food/chiken.png"
+  image: "/assets/items/food/chicken.png"
 }
 images {
   image: "/assets/items/food/coconut.png"

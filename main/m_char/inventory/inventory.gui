@@ -15,18 +15,9 @@ textures {
   name: "items"
   texture: "/items.atlas"
 }
-nodes {
-  position {
-    x: 640.0
-    y: 360.0
-  }
-  type: TYPE_BOX
-  texture: "squares/black_square"
-  id: "box"
-  inherit_alpha: true
-  alpha: 0.5
-  size_mode: SIZE_MODE_AUTO
-  enabled: false
+textures {
+  name: "m_char"
+  texture: "/assets/m_char/m_char.atlas"
 }
 nodes {
   position {
@@ -41,892 +32,975 @@ nodes {
   enabled: false
 }
 nodes {
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "slots"
+  parent: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
   position {
-    x: -4.0
-    y: -263.0
+    x: 138.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s0"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t0"
+  parent: "s0"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 210.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s1"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t1"
+  parent: "s1"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 282.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s2"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t2"
+  parent: "s2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 354.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s3"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t3"
+  parent: "s3"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 138.0
+    y: 72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s4"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t4"
+  parent: "s4"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 210.0
+    y: 72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s5"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t5"
+  parent: "s5"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 282.0
+    y: 72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s6"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t6"
+  parent: "s6"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 354.0
+    y: 72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s7"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t7"
+  parent: "s7"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 138.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s8"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t8"
+  parent: "s8"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 210.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s9"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t9"
+  parent: "s9"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 282.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s10"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t10"
+  parent: "s10"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 354.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s11"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t11"
+  parent: "s11"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 138.0
+    y: -72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s12"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t12"
+  parent: "s12"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 210.0
+    y: -72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s13"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t13"
+  parent: "s13"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 282.0
+    y: -72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s14"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t14"
+  parent: "s14"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 354.0
+    y: -72.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s15"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t15"
+  parent: "s15"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 138.0
+    y: -144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s16"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t16"
+  parent: "s16"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 210.0
+    y: -144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s17"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t17"
+  parent: "s17"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 282.0
+    y: -144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s18"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t18"
+  parent: "s18"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 354.0
+    y: -144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "s19"
+  parent: "slots"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "t19"
+  parent: "s19"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -68.0
+    y: 235.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "equipment "
+  parent: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -226.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e0"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -310.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e1"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -310.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e2"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -310.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e3"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -226.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e4"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -190.0
+  }
+  scale {
+    x: 4.0
+    y: 4.0
+  }
+  type: TYPE_BOX
+  texture: "m_char/idle"
+  id: "m_char"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -653.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "currency"
+  parent: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 176.0
+    y: 203.0
   }
   size {
     x: 50.0
-    y: 30.0
+    y: 25.0
   }
   type: TYPE_TEXT
   text: "0"
   font: "triforce"
   id: "gold"
-  parent: "inventory"
+  parent: "currency"
   inherit_alpha: true
 }
 nodes {
   position {
-    x: -4.0
-    y: -306.0
+    x: 266.0
+    y: 203.0
   }
   size {
     x: 50.0
-    y: 30.0
+    y: 25.0
   }
   type: TYPE_TEXT
   text: "0"
   font: "triforce"
-  id: "star_shard"
-  parent: "inventory"
+  id: "starshard"
+  parent: "currency"
   inherit_alpha: true
-}
-nodes {
-  position {
-    x: -494.0
-    y: 210.0
-  }
-  size {
-    x: 200.0
-    y: 100.0
-  }
-  type: TYPE_BOX
-  id: "t"
-  parent: "inventory"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-  visible: false
-}
-nodes {
-  position {
-    x: 220.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "0"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t0"
-  parent: "0"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 327.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "1"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t1"
-  parent: "1"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 432.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "2"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t2"
-  parent: "2"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 539.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "3"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t3"
-  parent: "3"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 644.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "4"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t4"
-  parent: "4"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 751.0
-    y: -9.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "5"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t5"
-  parent: "5"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 220.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "6"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t6"
-  parent: "6"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 327.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "7"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t7"
-  parent: "7"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 432.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "8"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t8"
-  parent: "8"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 539.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "9"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t9"
-  parent: "9"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 644.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "10"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t10"
-  parent: "10"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 751.0
-    y: -115.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "11"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t11"
-  parent: "11"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 220.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "12"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t12"
-  parent: "12"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 327.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "13"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t13"
-  parent: "13"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 432.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "14"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t14"
-  parent: "14"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 539.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "15"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t15"
-  parent: "15"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 644.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "16"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t16"
-  parent: "16"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 751.0
-    y: -221.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "17"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t17"
-  parent: "17"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 220.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "18"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t18"
-  parent: "18"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 327.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "19"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t19"
-  parent: "19"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 432.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "20"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t20"
-  parent: "20"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 539.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "21"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t21"
-  parent: "21"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 644.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "22"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t22"
-  parent: "22"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 751.0
-    y: -328.0
-  }
-  scale {
-    x: 4.0
-    y: 4.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "23"
-  parent: "t"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 7.25
-    y: -7.0
-  }
-  scale {
-    x: 0.25
-    y: 0.25
-  }
-  size {
-    x: 20.0
-    y: 10.0
-  }
-  type: TYPE_TEXT
-  font: "triforce"
-  id: "t23"
-  parent: "23"
-  inherit_alpha: true
+  text_leading: 0.0
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT
