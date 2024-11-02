@@ -13,11 +13,15 @@ textures {
 }
 textures {
   name: "items"
-  texture: "/items.atlas"
+  texture: "/assets/items/food/food.atlas"
 }
 textures {
   name: "m_char"
   texture: "/assets/m_char/m_char.atlas"
+}
+textures {
+  name: "equipment"
+  texture: "/assets/items/equipment/equipment.atlas"
 }
 nodes {
   position {

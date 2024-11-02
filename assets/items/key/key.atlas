@@ -1,0 +1,13 @@
+images {
+  image: "/assets/items/key/key_0.png"
+}
+images {
+  image: "/assets/items/key/key_1.png"
+}
+images {
+  image: "/assets/items/key/key_2.png"
+}
+images {
+  image: "/assets/items/key/key_3.png"
+}
+extrude_borders: 2
