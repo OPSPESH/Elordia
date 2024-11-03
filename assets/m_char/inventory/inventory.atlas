@@ -1,4 +1,7 @@
 images {
   image: "/assets/m_char/inventory/inventory.png"
 }
+images {
+  image: "/assets/m_char/inventory/health_segment.png"
+}
 extrude_borders: 2

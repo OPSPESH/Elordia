@@ -1,6 +1,60 @@
 local defsave = require("defsave.defsave")
 local item = require("main.m_char.inventory.items")
 local loaded = 0
+local health = 19
+local temp_health -- make it defsave.get when implemented 
+
+local function health_bar()
+	local l1 = {2,4,6,8,10,12,14,16,18,20}
+	local l2 = {1,3,5,7,9,11,13,15,17,19}
+	local value 
+
+	for i = 1,10 do
+		local node = gui.get_node(i)
+		gui.set_visible(node, true)
+		gui.set_alpha(node, 1)
+	end
+	
+	if health == 19 then
+		local node = gui.get_node(10)
+		gui.set_alpha(node, 0.5)
+	else 
+		for i = 0,9 do
+			value = table.remove(l1, 1)
+			if health == value then 
+				temp_health = health / 2
+				for o = 1,10 do 
+					local node = gui.get_node(o)
+					if o > temp_health then 
+						gui.set_visible(node, false)
+					end
+				end
+				break
+			end
+			table.insert(l1, value)
+		end
+
+		for i = 0, 9 do 
+			value = table.remove(l2, 1)
+			if health == value then 
+				temp_health = (health + 1)/2
+				for o = 1,10 do 
+					if o > temp_health then
+						for p = o,10 do 
+							print(p)
+							local node = gui.get_node(p)
+							gui.set_visible(node, false)
+						end
+						local node = gui.get_node(o-1)
+						gui.set_alpha(node, 0.5)
+						break
+					end
+				end
+			end
+			table.insert(l1, value)
+		end
+	end
+end
 
 local function items()
 	-- if there is no item sets the ammount to 0
@@ -54,6 +108,7 @@ local function update()
 	currency()
 	items()
 	equipment()
+	health_bar()
 end
 
 function init(self)

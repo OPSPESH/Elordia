@@ -1,6 +1,7 @@
 local l = require "main.loader"
 local defsave = require("defsave.defsave")
 local sprint
+local health = defsave.get("player", "health")
 
 function init(self)
 	defsave.appname = "Realms_of_elordia"

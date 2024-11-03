@@ -1,0 +1,22 @@
+script: "/assets/village/npc/dialogue/armour_man/dialogue.gui_script"
+fonts {
+  name: "triforce"
+  font: "/assets/font/triforce/triforce.font"
+}
+nodes {
+  position {
+    x: 330.0
+    y: 469.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "Hello"
+  font: "triforce"
+  id: "text"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -1025,5 +1025,136 @@ nodes {
   inherit_alpha: true
   text_leading: 0.0
 }
+nodes {
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "Health"
+  parent: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -535.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "1"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -506.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "2"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -477.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "3"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -448.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "4"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -419.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "5"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -390.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "6"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -361.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "7"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -332.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "8"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -303.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "9"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -274.5
+    y: 269.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/health_segment"
+  id: "10"
+  parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

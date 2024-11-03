@@ -1,0 +1,269 @@
+{
+    "startingElement": null,
+    "boards": {
+        "0d66e18e-3948-4da1-8d3d-ee031af20064": {
+            "name": "armour_man",
+            "notes": [],
+            "elements": [
+                "a24b87b4-0d54-4d71-b642-d2dab3e8c8ec",
+                "64836ec8-508a-4180-8868-b511a5e9b055",
+                "cdf5b995-98ee-401f-bb84-366794a82de9",
+                "9640732c-a40e-4692-ad0f-39ef37a50227",
+                "b8ae161e-efc4-4b4a-b747-c53e2e27d374",
+                "e7a67f7a-7ea0-4586-be65-2ea582cf1f76",
+                "a1a51036-43f0-4020-858b-f984169723fd",
+                "e25353c2-24a3-44d0-b862-e27a21d972d7",
+                "78d9760a-105b-4843-b68e-526268487024"
+            ],
+            "connections": [
+                "1df389d2-eedf-4c3b-bc54-f26f987c976c",
+                "7f8ac7a1-5df1-4b89-8f49-71aa68bb7b26",
+                "579f0f02-af94-4edd-b440-08644f11f098",
+                "3f742eeb-9b47-4b33-b716-bb7eb0b2342c",
+                "213c7129-4595-4f1b-acc0-6f6df7ed4b94",
+                "609332bb-b88c-4d49-881c-e5bfcaabecb8",
+                "31d81e3b-d42c-4c9a-bef4-4be33c9041b6",
+                "61513e61-0376-4e61-8911-acb00fed0b80",
+                "2e022523-210e-435f-a04e-414d83df6f81",
+                "5b9c5549-e5a6-400a-8f50-ededc999e000"
+            ],
+            "branches": [
+                "d49f2070-002d-4ce5-845a-0029ccce5256"
+            ],
+            "jumpers": []
+        },
+        "2ad15ff6-f2ba-4f1d-9d9d-68938c683d7e": {
+            "name": "Root",
+            "root": true,
+            "children": [
+                "0d66e18e-3948-4da1-8d3d-ee031af20064"
+            ]
+        }
+    },
+    "notes": {},
+    "elements": {
+        "a24b87b4-0d54-4d71-b642-d2dab3e8c8ec": {
+            "autoHeight": true,
+            "title": "<p>0<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Hello child<\/p>",
+            "outputs": [
+                "7f8ac7a1-5df1-4b89-8f49-71aa68bb7b26"
+            ]
+        },
+        "64836ec8-508a-4180-8868-b511a5e9b055": {
+            "autoHeight": true,
+            "title": "<p>1<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>You've arrived at last.<\/p>",
+            "outputs": [
+                "1df389d2-eedf-4c3b-bc54-f26f987c976c"
+            ]
+        },
+        "cdf5b995-98ee-401f-bb84-366794a82de9": {
+            "autoHeight": true,
+            "title": "<p>2<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Do you think you are ready to face your destiny. <\/p>",
+            "outputs": [
+                "579f0f02-af94-4edd-b440-08644f11f098",
+                "3f742eeb-9b47-4b33-b716-bb7eb0b2342c",
+                "213c7129-4595-4f1b-acc0-6f6df7ed4b94"
+            ]
+        },
+        "9640732c-a40e-4692-ad0f-39ef37a50227": {
+            "autoHeight": false,
+            "title": "<p>Dismissal<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>You are foolish child<\/p>",
+            "outputs": [
+                "609332bb-b88c-4d49-881c-e5bfcaabecb8"
+            ]
+        },
+        "b8ae161e-efc4-4b4a-b747-c53e2e27d374": {
+            "autoHeight": true,
+            "title": "<p>Understanding<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Ahhh. Just as I thought. We must procced anyway  <\/p>",
+            "outputs": [
+                "61513e61-0376-4e61-8911-acb00fed0b80"
+            ]
+        },
+        "e7a67f7a-7ea0-4586-be65-2ea582cf1f76": {
+            "autoHeight": true,
+            "title": "<p>sorrow<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>You are useless. But you are our only hope <\/p>",
+            "outputs": [
+                "2e022523-210e-435f-a04e-414d83df6f81"
+            ]
+        },
+        "a1a51036-43f0-4020-858b-f984169723fd": {
+            "autoHeight": true,
+            "title": "<p>Dismissal 1<\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>We both know you aren't ready. But you must go any way<\/p>",
+            "outputs": [
+                "31d81e3b-d42c-4c9a-bef4-4be33c9041b6"
+            ]
+        },
+        "e25353c2-24a3-44d0-b862-e27a21d972d7": {
+            "autoHeight": true,
+            "title": "<p><\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Well. We must proceed. <\/p>",
+            "outputs": [
+                "5b9c5549-e5a6-400a-8f50-ededc999e000"
+            ]
+        },
+        "78d9760a-105b-4843-b68e-526268487024": {
+            "autoHeight": true,
+            "title": "<p><\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Here have this armour. It will help you on your journey <\/p>",
+            "outputs": []
+        }
+    },
+    "connections": {
+        "1df389d2-eedf-4c3b-bc54-f26f987c976c": {
+            "sourceType": "elements",
+            "label": null,
+            "sourceid": "64836ec8-508a-4180-8868-b511a5e9b055",
+            "targetid": "cdf5b995-98ee-401f-bb84-366794a82de9",
+            "targetFace": "left",
+            "targetType": "elements",
+            "theme": "default",
+            "type": "Bezier"
+        },
+        "7f8ac7a1-5df1-4b89-8f49-71aa68bb7b26": {
+            "sourceType": "elements",
+            "label": null,
+            "sourceid": "a24b87b4-0d54-4d71-b642-d2dab3e8c8ec",
+            "targetid": "64836ec8-508a-4180-8868-b511a5e9b055",
+            "targetFace": "left",
+            "targetType": "elements",
+            "theme": "default",
+            "type": "Bezier"
+        },
+        "579f0f02-af94-4edd-b440-08644f11f098": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "9640732c-a40e-4692-ad0f-39ef37a50227",
+            "label": "<p>Yes<\/p>",
+            "sourceid": "cdf5b995-98ee-401f-bb84-366794a82de9",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "3f742eeb-9b47-4b33-b716-bb7eb0b2342c": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "b8ae161e-efc4-4b4a-b747-c53e2e27d374",
+            "label": "<p>No<\/p>",
+            "sourceid": "cdf5b995-98ee-401f-bb84-366794a82de9",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "213c7129-4595-4f1b-acc0-6f6df7ed4b94": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "e7a67f7a-7ea0-4586-be65-2ea582cf1f76",
+            "label": "<p>What<\/p>",
+            "sourceid": "cdf5b995-98ee-401f-bb84-366794a82de9",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "609332bb-b88c-4d49-881c-e5bfcaabecb8": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "a1a51036-43f0-4020-858b-f984169723fd",
+            "label": null,
+            "sourceid": "9640732c-a40e-4692-ad0f-39ef37a50227",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "31d81e3b-d42c-4c9a-bef4-4be33c9041b6": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
+            "label": null,
+            "sourceid": "a1a51036-43f0-4020-858b-f984169723fd",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "61513e61-0376-4e61-8911-acb00fed0b80": {
+            "sourceType": "elements",
+            "label": null,
+            "sourceid": "b8ae161e-efc4-4b4a-b747-c53e2e27d374",
+            "targetid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
+            "targetFace": "left",
+            "targetType": "elements",
+            "theme": "default",
+            "type": "Bezier"
+        },
+        "2e022523-210e-435f-a04e-414d83df6f81": {
+            "sourceType": "elements",
+            "label": null,
+            "sourceid": "e7a67f7a-7ea0-4586-be65-2ea582cf1f76",
+            "targetid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
+            "targetFace": "left",
+            "targetType": "elements",
+            "theme": "default",
+            "type": "Bezier"
+        },
+        "5b9c5549-e5a6-400a-8f50-ededc999e000": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "78d9760a-105b-4843-b68e-526268487024",
+            "label": null,
+            "sourceid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
+            "theme": "default",
+            "sourceType": "elements"
+        }
+    },
+    "jumpers": {},
+    "assets": {
+        "647d0495-341f-42b2-8788-b47dace22bf8": {
+            "root": true,
+            "children": []
+        }
+    },
+    "branches": {
+        "d49f2070-002d-4ce5-845a-0029ccce5256": {
+            "conditions": {
+                "ifCondition": "c5d62326-9286-4970-8c59-78fe5d5c8d48"
+            },
+            "theme": "default"
+        }
+    },
+    "conditions": {
+        "c5d62326-9286-4970-8c59-78fe5d5c8d48": {
+            "script": null,
+            "output": null
+        }
+    },
+    "variables": {
+        "747d0495-341f-42b2-8788-b47dace22bf8": {
+            "root": true,
+            "children": []
+        }
+    },
+    "components": {
+        "65005bda-15d0-41c5-867f-68c118829f08": {
+            "name": "Root",
+            "root": true,
+            "children": []
+        }
+    },
+    "attributes": {},
+    "name": "Realms_of_elordia",
+    "cover": null
+}

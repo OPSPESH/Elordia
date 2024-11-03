@@ -17,6 +17,7 @@ return {
 		collection = "#my_house_upstairs",
 		position = vmath.vector3(133,32,0.9995),
 		sprint = false,
+		health = 10
 	},
 
 	inventory = {
