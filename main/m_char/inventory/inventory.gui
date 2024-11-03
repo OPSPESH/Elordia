@@ -33,7 +33,6 @@ nodes {
   id: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
-  enabled: false
 }
 nodes {
   type: TYPE_BOX
@@ -842,7 +841,7 @@ nodes {
 nodes {
   position {
     x: -68.0
-    y: 235.0
+    y: 313.0
   }
   type: TYPE_BOX
   texture: "items/blank"
@@ -891,7 +890,7 @@ nodes {
 }
 nodes {
   position {
-    x: -54.0
+    x: -138.0
     y: -310.0
   }
   scale {
@@ -911,7 +910,7 @@ nodes {
 nodes {
   position {
     x: -138.0
-    y: -310.0
+    y: -226.0
   }
   scale {
     x: 3.0
@@ -929,8 +928,8 @@ nodes {
 }
 nodes {
   position {
-    x: -138.0
-    y: -226.0
+    x: -54.0
+    y: -490.0
   }
   scale {
     x: 3.0
@@ -948,12 +947,31 @@ nodes {
 }
 nodes {
   position {
-    x: -54.0
-    y: -190.0
+    x: 30.0
+    y: -490.0
   }
   scale {
-    x: 4.0
-    y: 4.0
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e5"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -209.0
+  }
+  scale {
+    x: 3.5
+    y: 3.5
   }
   type: TYPE_BOX
   texture: "m_char/idle"
@@ -1001,7 +1019,7 @@ nodes {
   type: TYPE_TEXT
   text: "0"
   font: "triforce"
-  id: "starshard"
+  id: "star_shard"
   parent: "currency"
   inherit_alpha: true
   text_leading: 0.0

@@ -3,6 +3,7 @@ local defsave = require("defsave.defsave")
 local camera = require("orthographic.camera")
 
 local function cam(self)
+	-- updates cam pos/ settings based on collection 
 	self.collection = defsave.get("player", "collection")
 	if self.collection == "#village" then
 		camera.follow(nil, "/m_char")
