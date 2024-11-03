@@ -62,6 +62,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/main/village/houses/weapon_store.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"armour_forrest\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/main/village/armour_forrest.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

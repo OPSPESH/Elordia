@@ -20,6 +20,8 @@ local function cam(self)
 		go.set_position(defsave.get("camera", "weapon_store"), "/camera")
 		camera.unfollow(nil)
 		camera.set_zoom(nil, 2.5)
+	elseif self.collection == "#armour_forrest" then
+		camera.set_zoom(nil, 2)
 	end
 
 end
@@ -41,6 +43,25 @@ function on_message(self, message_id, message, sender)
 		if self.collection == nil then 
 			return
 			print(self.collection)
+
+		elseif self.collection == "#armour_forrest" then
+			-- fades the screen
+			msg.post("/transition#transition", "play")
+			-- waits for it to be a black screen
+			timer.delay(0.5, false, function ()
+				-- deltes the old screen
+				go.delete(self.ids)
+				--spawns the new screen 
+				self.ids = collectionfactory.create(l.get_collection())
+				self.current_screen = l.get_collection()
+				-- tells the player to move 
+				msg.post("m_char#position", "save_pos")
+				msg.post("/m_char#position", "load_pos", {"armour_forrest"})
+				defsave.set("player", "collection", self.current_screen)
+				cam(self)
+				msg.post("/m_char", "force_walk", {true})
+				l.get_id(self.ids)
+			end)
 
 		elseif self.collection == "#my_house_downstairs" then
 			

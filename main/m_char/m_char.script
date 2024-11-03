@@ -98,7 +98,7 @@ function on_message(self, message_id, message, sender)
 			if message.enter == true then 
 				l.give_collection("#my_house_downstairs")
 				self.colliding = "load_world"
-			elseif message.enter == false then
+			else
 				self.colliding = false
 			end
 		end
@@ -107,7 +107,7 @@ function on_message(self, message_id, message, sender)
 			if message.enter ==  true then
 				l.give_collection("#my_house_upstairs")
 				self.colliding = "load_world"
-			elseif message.enter == false then
+			else
 				self.colliding = false
 			end
 		end
@@ -116,7 +116,7 @@ function on_message(self, message_id, message, sender)
 			if message.enter ==  true then
 				l.give_collection("#village")
 				self.colliding = "load_world"
-			elseif message.enter == false then
+			else
 				self.colliding = false
 			end
 		end
@@ -125,7 +125,7 @@ function on_message(self, message_id, message, sender)
 			if message.enter == true then
 				l.give_collection("#weapon_store")
 				self.colliding = "load_world"
-			elseif message.enter == false then
+			else
 				self.colliding = false
 			end
 		end
@@ -133,7 +133,16 @@ function on_message(self, message_id, message, sender)
 		if message.other_group == hash("weapon_store_shopkeeper") then
 			if message.enter == true then
 				self.colliding = "weapon_store_shopkeeper"
-			elseif message.enter == false then
+			else
+				self.colliding = false
+			end
+		end
+
+		if message.other_group == hash("armour_forrest") then
+			if message.enter == true then
+				l.give_collection("#armour_forrest")
+				self.colliding = "load_world"
+			else
 				self.colliding = false
 			end
 		end
@@ -199,6 +208,7 @@ function on_input(self, action_id, action)
 
 		if action_id == hash("action") and self.colliding ~= false then
 			if self.colliding == "load_world" then
+				print("good")
 				msg.post("/worlds#loader", "load_level")
 			elseif self.colliding == "weapon_store_shopkeeper" then
 				msg.post(self.dialogue_url, "play", {"dialogue_1"})

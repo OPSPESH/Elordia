@@ -24,6 +24,7 @@ embedded_components {
   "mask: \"load_village\"\n"
   "mask: \"load_weapon_store\"\n"
   "mask: \"weapon_store_shopkeeper\"\n"
+  "mask: \"armour_forrest\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
