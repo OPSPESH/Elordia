@@ -47,28 +47,30 @@ function update(self, dt)
 	-- sets which animation plays if no movement
 	local anim = hash("idle")
 
-	-- sets which anim plays if walking
 	if self.speed == 75 then
-		if self.dir.y > 0 then
-			anim = hash("walk_up")
-		elseif self.dir.y < 0 then
-			anim = hash("walk_down")
-		elseif self.dir.x > 0 then
-			anim = hash("walk_right")
-		elseif self.dir.x < 0 then
-			anim = hash("walk_left")
+		if self.dir.x > 0 then 
+			anim = hash("walk")
+			sprite.set_hflip("#sprite", false)
+		elseif self.dir.x < 0 then 
+			anim = hash("walk")
+			sprite.set_hflip("#sprite", true)
+		elseif self.dir.y < 0 then 
+			anim = hash("walk")
+		elseif self.dir.y > 0 then 
+			anim = hash("walk")
 		end
-
-	-- sets which animation plays if sprinting 
+		-- sets which animation plays if sprinting 
 	elseif self.speed == 125 then
-		if self.dir.y > 0 then
-			anim = hash("run_up")
-		elseif self.dir.y < 0 then
-			anim = hash("run_down")
-		elseif self.dir.x > 0 then
-			anim = hash("run_right")
-		elseif self.dir.x < 0 then
-			anim = hash("run_left")
+		if self.dir.x > 0 then 
+			anim = hash("run")
+			sprite.set_hflip("#sprite", false)
+		elseif self.dir.x < 0 then 
+			anim = hash("run")
+			sprite.set_hflip("#sprite", true)
+		elseif self.dir.y < 0 then 
+			anim = hash("run")
+		elseif self.dir.y > 0 then 
+			anim = hash("run")
 		end
 	end
 

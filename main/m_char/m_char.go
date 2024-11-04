@@ -29,15 +29,16 @@ embedded_components {
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"
   "    position {\n"
-  "      y: -10.0\n"
+  "      x: 1.85\n"
+  "      y: -8.1\n"
   "    }\n"
   "    rotation {\n"
   "    }\n"
   "    index: 0\n"
   "    count: 3\n"
   "  }\n"
-  "  data: 7.3333335\n"
-  "  data: 6.1593957\n"
+  "  data: 7.5\n"
+  "  data: 3.75\n"
   "  data: 10.0\n"
   "}\n"
   ""
@@ -49,10 +50,14 @@ embedded_components {
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/assets/m_char/m_char.atlas\"\n"
+  "  texture: \"/assets/m_char/m_char/m_char.atlas\"\n"
   "}\n"
   ""
   position {
     z: -1.5
+  }
+  scale {
+    x: 1.25
+    y: 1.25
   }
 }

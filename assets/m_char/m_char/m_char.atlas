@@ -1,0 +1,177 @@
+animations {
+  id: "idle"
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle1.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/idle/m_char_idle6.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+}
+animations {
+  id: "walk"
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk1.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk6.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk7.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk8.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+}
+animations {
+  id: "run"
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk1.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk6.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk7.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/walk/m_char_walk8.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 20
+}
+animations {
+  id: "attack_1"
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_1.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack1/m_char_attack_6.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 10
+}
+animations {
+  id: "attack_2"
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_6.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack2/m_char_attack_7.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+}
+animations {
+  id: "attack_3"
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_4.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_5.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_6.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_7.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_8.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_9.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_10.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/attack3/m_char_attack_11.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 9
+}
+animations {
+  id: "death"
+  images {
+    image: "/assets/m_char/m_char/death/m_char_death1.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/death/m_char_death2.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/death/m_char_death3.png"
+  }
+  images {
+    image: "/assets/m_char/m_char/death/m_char_death4.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 7
+}
+extrude_borders: 2

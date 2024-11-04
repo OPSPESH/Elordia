@@ -17,7 +17,7 @@ textures {
 }
 textures {
   name: "m_char"
-  texture: "/assets/m_char/m_char.atlas"
+  texture: "/assets/m_char/m_char/m_char.atlas"
 }
 textures {
   name: "equipment"
@@ -33,7 +33,6 @@ nodes {
   id: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
-  enabled: false
 }
 nodes {
   type: TYPE_BOX
@@ -967,8 +966,8 @@ nodes {
 }
 nodes {
   position {
-    x: -54.0
-    y: -209.0
+    x: -56.0
+    y: -228.0
   }
   scale {
     x: 3.5
@@ -1026,11 +1025,8 @@ nodes {
   text_leading: 0.0
 }
 nodes {
-  size {
-    x: 200.0
-    y: 100.0
-  }
   type: TYPE_BOX
+  texture: "items/blank"
   id: "Health"
   parent: "inventory"
   inherit_alpha: true
