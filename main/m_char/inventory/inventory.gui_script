@@ -1,7 +1,7 @@
 local defsave = require("defsave.defsave")
 local item = require("main.m_char.inventory.items")
 local loaded = 0
-local health = 19
+local health = defsave.get("player", "health")
 local temp_health -- make it defsave.get when implemented 
 
 local function health_bar()
