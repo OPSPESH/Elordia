@@ -11,6 +11,7 @@ function init(self)
 	
 	self.speed = 75
 	self.inventory = 0
+	self.dialogue = 0
 
 	msg.post(".", "acquire_input_focus")
 
@@ -162,12 +163,12 @@ function on_message(self, message_id, message, sender)
 		end
 	end
 
-	if message_id == hash("dialogue_url") then
-		self.dialogue_url = table.remove(message)
-	end
-
 	if message_id == hash("slow_down") then
 		self.speed = 75
+	end
+
+	if message_id == hash("dialogue_0") then
+		self.dialogue = 0
 	end
 end
 
@@ -186,7 +187,7 @@ function on_input(self, action_id, action)
 		end
 	end
 	
-	if self.inventory == 0 then 
+	if self.inventory == 0 and self.dialogue == 0 then 
 	-- check whether walking or running
 		if action_id == hash("sprint") then
 			if sprint == true then
@@ -211,10 +212,10 @@ function on_input(self, action_id, action)
 
 		if action_id == hash("action") and self.colliding ~= false then
 			if self.colliding == "load_world" then
-				print("good")
 				msg.post("/worlds#loader", "load_level")
 			elseif self.colliding == "weapon_store_shopkeeper" then
-				msg.post(self.dialogue_url, "play", {"dialogue_1"})
+				self.dialogue = 1
+				msg.post("/m_char#dialogue", "play", {"weapon_store_shopkeeper"})
 			end
 			self.colliding = false
 		end
