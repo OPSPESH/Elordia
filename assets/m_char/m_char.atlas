@@ -1,3 +1,6 @@
+images {
+  image: "/assets/m_char/dialogue.png"
+}
 animations {
   id: "idle"
   images {

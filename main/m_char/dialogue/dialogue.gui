@@ -1,0 +1,158 @@
+script: "/main/m_char/dialogue/dialogue.gui_script"
+fonts {
+  name: "default"
+  font: "/builtins/fonts/default.font"
+}
+textures {
+  name: "test"
+  texture: "/assets/m_char/m_char.atlas"
+}
+nodes {
+  position {
+    x: 129.0
+    y: -60.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "dialogue"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 306.0
+    y: 146.0
+  }
+  scale {
+    x: 10.0
+    y: 6.0
+  }
+  type: TYPE_BOX
+  texture: "test/dialogue"
+  id: "box"
+  parent: "dialogue"
+  inherit_alpha: true
+  alpha: 0.5
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 670.0
+    y: 196.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "test/dialogue"
+  id: "box1"
+  parent: "dialogue"
+  inherit_alpha: true
+  alpha: 0.5
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 670.0
+    y: 144.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "test/dialogue"
+  id: "box2"
+  parent: "dialogue"
+  inherit_alpha: true
+  alpha: 0.5
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 670.0
+    y: 92.0
+  }
+  scale {
+    x: 2.0
+    y: 2.0
+  }
+  type: TYPE_BOX
+  texture: "test/dialogue"
+  id: "box3"
+  parent: "dialogue"
+  inherit_alpha: true
+  alpha: 0.5
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 672.0
+    y: 196.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "default"
+  id: "option_1"
+  parent: "dialogue"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 672.0
+    y: 144.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "default"
+  id: "option_2"
+  parent: "dialogue"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 672.0
+    y: 92.0
+  }
+  size {
+    x: 100.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "i\n"
+  ""
+  font: "default"
+  id: "option_3"
+  parent: "dialogue"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 307.0
+    y: 146.0
+  }
+  size {
+    x: 400.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  text: "<text>"
+  font: "default"
+  id: "text"
+  line_break: true
+  parent: "dialogue"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

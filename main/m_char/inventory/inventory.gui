@@ -17,7 +17,7 @@ textures {
 }
 textures {
   name: "m_char"
-  texture: "/assets/m_char/m_char/m_char.atlas"
+  texture: "/assets/m_char/m_char.atlas"
 }
 textures {
   name: "equipment"

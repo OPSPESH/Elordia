@@ -10,6 +10,10 @@ components {
   id: "inventory"
   component: "/main/m_char/inventory/inventory.gui"
 }
+components {
+  id: "dialogue"
+  component: "/main/m_char/dialogue/dialogue.gui"
+}
 embedded_components {
   id: "collisionobject"
   type: "collisionobject"
@@ -50,7 +54,7 @@ embedded_components {
   "material: \"/builtins/materials/sprite.material\"\n"
   "textures {\n"
   "  sampler: \"texture_sampler\"\n"
-  "  texture: \"/assets/m_char/m_char/m_char.atlas\"\n"
+  "  texture: \"/assets/m_char/m_char.atlas\"\n"
   "}\n"
   ""
   position {
