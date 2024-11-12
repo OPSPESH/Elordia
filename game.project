@@ -5,7 +5,6 @@ custom_resources = /res
 dependencies#0 = https://github.com/britzl/defold-orthographic/archive/refs/tags/3.3.2.zip
 dependencies#1 = https://github.com/subsoap/defsave/archive/refs/tags/v1.2.6.zip
 dependencies#2 = https://github.com/paweljarosz/defarc/archive/refs/tags/v0.3.2.zip
-dependencies#3 = https://github.com/Insality/defold-printer/archive/refs/tags/1.2.0.zip
 
 [bootstrap]
 main_collection = /main/main.collectionc

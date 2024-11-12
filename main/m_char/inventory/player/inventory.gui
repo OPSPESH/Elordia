@@ -1,4 +1,4 @@
-script: "/main/m_char/inventory/inventory.gui_script"
+script: "/main/m_char/inventory/player/inventory.gui_script"
 fonts {
   name: "triforce"
   font: "/assets/font/triforce/triforce.font"
@@ -8,20 +8,12 @@ textures {
   texture: "/assets/m_char/inventory/inventory.atlas"
 }
 textures {
-  name: "squares"
-  texture: "/assets/squares/squares.atlas"
-}
-textures {
-  name: "items"
-  texture: "/assets/items/food/food.atlas"
-}
-textures {
   name: "m_char"
   texture: "/assets/m_char/m_char.atlas"
 }
 textures {
-  name: "equipment"
-  texture: "/assets/items/equipment/equipment.atlas"
+  name: "items"
+  texture: "/assets/items/items.atlas"
 }
 nodes {
   position {
@@ -1150,6 +1142,22 @@ nodes {
   texture: "inventory/health_segment"
   id: "10"
   parent: "Health"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 138.0
+    y: 144.0
+  }
+  scale {
+    x: 1.2
+    y: 1.2
+  }
+  type: TYPE_BOX
+  texture: "inventory/select"
+  id: "select"
+  parent: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }

@@ -4,4 +4,18 @@ images {
 images {
   image: "/assets/m_char/inventory/health_segment.png"
 }
+images {
+  image: "/assets/m_char/inventory/shop.png"
+}
+animations {
+  id: "select"
+  images {
+    image: "/assets/m_char/inventory/select_0.png"
+  }
+  images {
+    image: "/assets/m_char/inventory/select_1.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 4
+}
 extrude_borders: 2

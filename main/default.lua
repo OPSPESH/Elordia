@@ -81,9 +81,12 @@ return {
 	},
 
 	npc = {
-		weapon_store_shopkeeper = {
-			gold = 100,
-			items = {"shortsword", "woodensword", "dagger", "bow", "cross_bow", "arrow_5", "bolt_5"}
-		},
+		wsg = 100,
+		ws0 = "wooden_sword",
+		ws0g = 5,
+		ws1 = "short_bow",
+		ws1g = 10,
+		ws2 = "arrow",
+		ws2g = 1,
 	},
 }

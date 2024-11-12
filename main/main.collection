@@ -74,7 +74,7 @@ embedded_instances {
   id: "inventory"
   data: "components {\n"
   "  id: \"inventory\"\n"
-  "  component: \"/main/m_char/inventory/inventory.gui\"\n"
+  "  component: \"/main/m_char/inventory/player/inventory.gui\"\n"
   "}\n"
   ""
 }
