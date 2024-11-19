@@ -5,7 +5,10 @@ images {
   image: "/assets/m_char/inventory/health_segment.png"
 }
 images {
-  image: "/assets/m_char/inventory/shop.png"
+  image: "/assets/m_char/inventory/shop_items.png"
+}
+images {
+  image: "/assets/m_char/inventory/shop_equipment.png"
 }
 animations {
   id: "select"

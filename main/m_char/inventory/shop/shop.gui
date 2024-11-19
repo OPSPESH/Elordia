@@ -1,7 +1,11 @@
 script: "/main/m_char/inventory/shop/shop.gui_script"
 fonts {
-  name: "triforce"
-  font: "/assets/font/triforce/triforce.font"
+  name: "triforce_bitmap"
+  font: "/assets/font/triforce/triforce_bitmap.font"
+}
+fonts {
+  name: "triforce_distance"
+  font: "/assets/font/triforce/triforce_distance.font"
 }
 textures {
   name: "items"
@@ -11,22 +15,27 @@ textures {
   name: "inventory"
   texture: "/assets/m_char/inventory/inventory.atlas"
 }
+textures {
+  name: "m_char"
+  texture: "/assets/m_char/m_char.atlas"
+}
 nodes {
   position {
     x: 640.0
     y: 360.0
   }
   type: TYPE_BOX
-  texture: "inventory/shop"
-  id: "inventory"
+  texture: "inventory/shop_equipment"
+  id: "shop_ui"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+  enabled: false
 }
 nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "shop"
-  parent: "inventory"
+  parent: "shop_ui"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -65,7 +74,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t0"
   parent: "s0"
   inherit_alpha: true
@@ -105,7 +114,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t1"
   parent: "s1"
   inherit_alpha: true
@@ -145,7 +154,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t2"
   parent: "s2"
   inherit_alpha: true
@@ -185,7 +194,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t3"
   parent: "s3"
   inherit_alpha: true
@@ -225,7 +234,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t4"
   parent: "s4"
   inherit_alpha: true
@@ -265,7 +274,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t5"
   parent: "s5"
   inherit_alpha: true
@@ -305,7 +314,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t6"
   parent: "s6"
   inherit_alpha: true
@@ -345,7 +354,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t7"
   parent: "s7"
   inherit_alpha: true
@@ -384,7 +393,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t8"
   parent: "s8"
   inherit_alpha: true
@@ -423,7 +432,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t9"
   parent: "s9"
   inherit_alpha: true
@@ -462,7 +471,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t10"
   parent: "s10"
   inherit_alpha: true
@@ -501,7 +510,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t11"
   parent: "s11"
   inherit_alpha: true
@@ -541,7 +550,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t12"
   parent: "s12"
   inherit_alpha: true
@@ -581,7 +590,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t13"
   parent: "s13"
   inherit_alpha: true
@@ -621,7 +630,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t14"
   parent: "s14"
   inherit_alpha: true
@@ -661,7 +670,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t15"
   parent: "s15"
   inherit_alpha: true
@@ -701,7 +710,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t16"
   parent: "s16"
   inherit_alpha: true
@@ -741,7 +750,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t17"
   parent: "s17"
   inherit_alpha: true
@@ -781,7 +790,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t18"
   parent: "s18"
   inherit_alpha: true
@@ -821,7 +830,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "t19"
   parent: "s19"
   inherit_alpha: true
@@ -833,7 +842,7 @@ nodes {
   type: TYPE_BOX
   texture: "items/blank"
   id: "player"
-  parent: "inventory"
+  parent: "shop_ui"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
@@ -872,7 +881,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp0"
   parent: "sp0"
   inherit_alpha: true
@@ -912,7 +921,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp1"
   parent: "sp1"
   inherit_alpha: true
@@ -952,7 +961,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp2"
   parent: "sp2"
   inherit_alpha: true
@@ -992,7 +1001,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp3"
   parent: "sp3"
   inherit_alpha: true
@@ -1032,7 +1041,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp4"
   parent: "sp4"
   inherit_alpha: true
@@ -1072,7 +1081,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp5"
   parent: "sp5"
   inherit_alpha: true
@@ -1112,7 +1121,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp6"
   parent: "sp6"
   inherit_alpha: true
@@ -1152,7 +1161,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp7"
   parent: "sp7"
   inherit_alpha: true
@@ -1191,7 +1200,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp8"
   parent: "sp8"
   inherit_alpha: true
@@ -1230,7 +1239,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp9"
   parent: "sp9"
   inherit_alpha: true
@@ -1269,7 +1278,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp10"
   parent: "sp10"
   inherit_alpha: true
@@ -1308,7 +1317,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp11"
   parent: "sp11"
   inherit_alpha: true
@@ -1348,7 +1357,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp12"
   parent: "sp12"
   inherit_alpha: true
@@ -1388,7 +1397,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp13"
   parent: "sp13"
   inherit_alpha: true
@@ -1428,7 +1437,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp14"
   parent: "sp14"
   inherit_alpha: true
@@ -1468,7 +1477,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp15"
   parent: "sp15"
   inherit_alpha: true
@@ -1508,7 +1517,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp16"
   parent: "sp16"
   inherit_alpha: true
@@ -1548,7 +1557,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp17"
   parent: "sp17"
   inherit_alpha: true
@@ -1588,7 +1597,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp18"
   parent: "sp18"
   inherit_alpha: true
@@ -1628,7 +1637,7 @@ nodes {
   type: TYPE_TEXT
   text: "64\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "tp19"
   parent: "sp19"
   inherit_alpha: true
@@ -1644,74 +1653,252 @@ nodes {
   }
   type: TYPE_TEXT
   text: "0"
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "gold"
-  parent: "inventory"
+  parent: "shop_ui"
   inherit_alpha: true
 }
 nodes {
   type: TYPE_BOX
   texture: "inventory/select"
   id: "select"
-  parent: "inventory"
+  parent: "shop_ui"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   type: TYPE_BOX
   texture: "items/blank"
-  id: "+/-"
-  parent: "inventory"
+  id: "controls"
+  parent: "shop_ui"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
 }
 nodes {
   position {
-    x: -143.0
+    x: -188.0
     y: -260.0
   }
   size {
-    x: 32.0
-    y: 32.0
+    x: 56.0
+    y: 56.0
   }
   type: TYPE_BOX
   id: "plus"
-  parent: "+/-"
+  parent: "controls"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
   visible: false
 }
 nodes {
   position {
-    x: -249.0
+    x: -340.0
     y: -260.0
   }
   size {
-    x: 32.0
-    y: 32.0
+    x: 56.0
+    y: 56.0
   }
   type: TYPE_BOX
   id: "minus"
-  parent: "+/-"
+  parent: "controls"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
   visible: false
 }
 nodes {
   position {
-    x: -196.0
+    x: -264.0
     y: -260.0
   }
   size {
-    x: 74.0
-    y: 32.0
+    x: 96.0
+    y: 56.0
   }
   type: TYPE_TEXT
-  text: "1000\n"
+  text: "0\n"
   ""
-  font: "triforce"
+  font: "triforce_bitmap"
   id: "amount"
-  parent: "+/-"
+  line_break: true
+  parent: "controls"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -86.0
+    y: -260.0
+  }
+  size {
+    x: 108.0
+    y: 56.0
+  }
+  type: TYPE_BOX
+  id: "buy"
+  parent: "controls"
+  inherit_alpha: true
+  alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 222.0
+    y: 313.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "equipment "
+  parent: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -226.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e0"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -310.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e1"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -310.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e2"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -226.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e3"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -490.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e4"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -490.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e5"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -56.0
+    y: -228.0
+  }
+  scale {
+    x: 3.5
+    y: 3.5
+  }
+  type: TYPE_BOX
+  texture: "m_char/idle"
+  id: "m_char"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -199.5
+    y: 298.0
+  }
+  scale {
+    x: 0.9
+    y: 0.9
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "triforce_distance"
+  id: "out"
+  parent: "shop_ui"
   inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"

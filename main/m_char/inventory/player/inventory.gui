@@ -1,7 +1,7 @@
 script: "/main/m_char/inventory/player/inventory.gui_script"
 fonts {
   name: "triforce"
-  font: "/assets/font/triforce/triforce.font"
+  font: "/assets/font/triforce/triforce_bitmap.font"
 }
 textures {
   name: "inventory"

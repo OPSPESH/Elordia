@@ -1,9 +1,10 @@
 local defsave = require("defsave.defsave")
 local item = require("main.m_char.inventory.items")
+local amount = 0
+-- local gold = defsave.get("inventory", "gold") 
+local gold = 100
+local select
 
-local function ammount(symbol)
-	
-end
 local function player()
 	for i  = 0,19 do 
 		local slot = defsave.get("inventory", "s"..i)
@@ -35,9 +36,7 @@ end
 local function currency()
 	-- sets the ammount of currency displayed 
 	local node = gui.get_node("gold")
-	gui.set_text(node, defsave.get("inventory", "gold"))
-	-- node = gui.get_node("star_shard")
-	-- gui.set_text(node, defsave.get("inventory", "starshard"))
+	gui.set_text(node, gold)
 end
 
 local function weapon_store()
@@ -58,6 +57,7 @@ local function weapon_store()
 		end
 	end
 end
+
 local function nullify()
 	for i = 0,19 do
 		local node = gui.get_node("s"..i)
@@ -72,10 +72,54 @@ local function nullify()
 	end
 end
 
+
 local function update()
 	player()
 	currency()
 	nullify()
+end
+
+local function controls(symbol)
+	local node = gui.get_node("amount")
+	local price = defsave.get("npc", select)
+	if price ~= nil then
+		if symbol == "plus" then 
+			amount = amount + 1
+			local total = amount * price
+			if total < 0 then 
+				gui.set_text(node, 0)
+			else
+				gui.set_text(node, total)
+			end
+		elseif symbol == "minus" then 
+			amount = amount - 1
+			local total = amount * price
+			if total < 0 then 
+				gui.set_text(node, 0)
+			else
+				gui.set_text(node, total)
+			end
+		elseif symbol == "buy" then
+			local total = amount * price
+			if total > gold then 
+				gui.set_text(gui.get_node("out"), "you don't have \n enough gold")
+			else 
+				gold = gold - total
+				amount = 0
+				gui.set_text(gui.get_node("amount"), 0)
+				-- if defsave.get("npc", select)
+				for i = 0,19 do
+					local slot = defsave.get("inventory", "s"..i)
+					if slot == "nul" then 
+						defsave.set("inventory", "s"..i, defsave.get("npc", select))
+						currency()
+						player()
+						break
+					end
+				end
+			end
+		end
+	end
 end
 
 local function select_shop(shop)
@@ -98,7 +142,7 @@ end
 function on_message(self, message_id, message, sender)
 	if message_id == hash("shop_show") then 
 		local msg = table.remove(message)
-		local node = gui.get_node("inventory")
+		local node = gui.get_node("shop_ui")
 		gui.set_enabled(node, true)
 		update()
 		select_shop(msg)
@@ -112,20 +156,21 @@ function on_input(self, action_id, action)
 			if gui.pick_node(node, action.x, action.y) then 
 				local set_node = gui.get_node("select")
 				gui.set_position(set_node, gui.get_position(node))
+				select = "ws"..i.."g"
+				amount = 0
+				gui.set_text(gui.get_node("amount"), 0)
 			end
 		end
 
-		for i = 0,19 do
-			local node = gui.get_node("sp"..i)
-			if gui.pick_node(node, action.x, action.y) then 
-				local set_node = gui.get_node("select")
-				gui.set_position(set_node, gui.get_position(node))
-			end
-		end 
 		if gui.pick_node(gui.get_node("plus"), action.x, action.y) then
-			ammount(gui.get_node("plus"))
+			controls("plus")
 		elseif gui.pick_node(gui.get_node("minus"), action.x, action.y) then
-			ammount(gui.get_node("minus"))
+			controls("minus")
+		elseif gui.pick_node(gui.get_node("buy"), action.x, action.y) then
+			controls("buy")
 		end
 	end
 end
+-- 
+-- you have a better 
+-- weapon equipped

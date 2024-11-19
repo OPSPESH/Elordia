@@ -39,6 +39,6 @@ height = 720
 cssfile = /builtins/manifests/web/dark_theme.css
 
 [graphics]
-default_texture_min_filter = linear
+default_texture_min_filter = nearest
 default_texture_mag_filter = nearest
 
