@@ -1,2 +1,4 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+*.editor_script linguist-language=Lua
+*.render_script linguist-language=Lua
+*.script linguist-language=Lua
+*.gui_script linguist-language=Lua
