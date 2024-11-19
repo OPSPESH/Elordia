@@ -21,7 +21,6 @@ nodes {
   id: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
-  enabled: false
 }
 nodes {
   type: TYPE_BOX
@@ -1657,6 +1656,63 @@ nodes {
   parent: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "+/-"
+  parent: "inventory"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -143.0
+    y: -260.0
+  }
+  size {
+    x: 32.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  id: "plus"
+  parent: "+/-"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -249.0
+    y: -260.0
+  }
+  size {
+    x: 32.0
+    y: 32.0
+  }
+  type: TYPE_BOX
+  id: "minus"
+  parent: "+/-"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -196.0
+    y: -260.0
+  }
+  size {
+    x: 74.0
+    y: 32.0
+  }
+  type: TYPE_TEXT
+  text: "1000\n"
+  ""
+  font: "triforce"
+  id: "amount"
+  parent: "+/-"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

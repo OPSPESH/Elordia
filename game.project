@@ -29,7 +29,7 @@ velocity_threshold = 100.0
 max_tile_count = 100000
 
 [windows]
-app_icon = /assets/ico/helmet.ico
+app_icon = /assets/ico/endgame.ico
 
 [display]
 width = 1280
