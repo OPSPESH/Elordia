@@ -883,7 +883,7 @@ nodes {
 }
 nodes {
   position {
-    x: -138.0
+    x: -54.0
     y: -310.0
   }
   scale {
@@ -902,8 +902,29 @@ nodes {
 }
 nodes {
   position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce"
+  id: "arrow"
+  parent: "e2"
+  inherit_alpha: true
+}
+nodes {
+  position {
     x: -138.0
-    y: -226.0
+    y: -310.0
   }
   scale {
     x: 3.0
@@ -921,8 +942,8 @@ nodes {
 }
 nodes {
   position {
-    x: -54.0
-    y: -490.0
+    x: -138.0
+    y: -227.0
   }
   scale {
     x: 3.0
@@ -953,6 +974,44 @@ nodes {
   }
   type: TYPE_BOX
   id: "e5"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -490.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e6"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -490.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e7"
   parent: "equipment "
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO

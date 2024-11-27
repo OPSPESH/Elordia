@@ -22,11 +22,11 @@ return {
 
 	inventory = {
 		-- "inventory", sx = item, sxa = ammount
-		s0 = "nul", -- top left
-		s0a = 0,
+		s0 = "wheat", -- top left
+		s0a = 10,
 		s1 = "nul",
 		s1a = 0,
-		s2 = "nul",
+		s2 = "tomato",
 		s2a = 0,
 		s3 = "nul",
 		s3a = 0,
@@ -72,11 +72,14 @@ return {
 		s23a = 0,
 		e0 = "nul", -- neck
 		e1 = "nul", -- ring 1
-		e2 = "nul", -- ring 2
-		e3 = "nul", -- armour
-		e4 = "nul", -- weapon
+		e2 = "nul", -- arrow
+		e3 = "nul", -- ring 2
+		e4 = "nul", -- armour
 		e5 = "nul", -- shield
-		gold = 0,
+		e6 = "nul", -- sword
+		e7 = "nul", -- bow
+		arrow = 0,
+		gold = 1000,
 		starshard = 0,
 	},
 

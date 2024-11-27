@@ -25,7 +25,7 @@ function init(self)
 
 	sprint = defsave.get("player", "sprint")
 
-	msg.post("#shop", "shop_show", {"weapon_store"})
+	msg.post("#shop_equipment", "shop_show", {"weapon_store"})
 end
 
 function final(self)

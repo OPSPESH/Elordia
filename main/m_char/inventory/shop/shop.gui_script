@@ -1,45 +1,12 @@
 local defsave = require("defsave.defsave")
 local item = require("main.m_char.inventory.items")
-local amount = 0
--- local gold = defsave.get("inventory", "gold") 
+local inventory = require("main.m_char.inventory.inventory")
 local gold = 100
 local select
-
-local function player()
-	for i  = 0,19 do 
-		local slot = defsave.get("inventory", "s"..i)
-		if slot == "nul" then 
-			defsave.set("inventory", "s"..i.."a", 0)
-		end
-	end
-
-	-- gets the name of item in the slot and sets its texture based on name 
-	for i = 0,19 do
-		local node = gui.get_node("sp"..i)
-		local slot = defsave.get("inventory", "s"..i)
-		gui.set_texture(node, "items")
-		gui.play_flipbook(node, item.items(slot))
-	end
-
-	-- sets the number of items in each slot 
-	for i = 0,19 do 
-		local node = gui.get_node("tp"..i)
-		local slot = defsave.get("inventory", "s"..i.."a")
-		if slot == 0 then
-			gui.set_text(node, "") 
-		else 
-			gui.set_text(node, slot)
-		end 
-	end
-end
-
-local function currency()
-	-- sets the ammount of currency displayed 
-	local node = gui.get_node("gold")
-	gui.set_text(node, gold)
-end
+local selected
 
 local function weapon_store()
+	gui.set_enabled(gui.get_node("player"), false)
 	for i = 0,2 do 
 		local node = gui.get_node("s"..i)
 		local slot = defsave.get("npc", "ws"..i)
@@ -72,24 +39,28 @@ local function nullify()
 	end
 end
 
-
 local function update()
-	player()
-	currency()
+	inventory.currency()
 	nullify()
 end
 
 local function controls(symbol)
+	local amount = 0
 	local node = gui.get_node("amount")
 	local price = defsave.get("npc", select)
+	
 	if price ~= nil then
-		if symbol == "plus" then 
-			amount = amount + 1
-			local total = amount * price
-			if total < 0 then 
-				gui.set_text(node, 0)
+		if symbol == "plus" then
+			if select == "ws0g" or select == "ws1g" then
+				print("h")
 			else
-				gui.set_text(node, total)
+				amount = amount + 1
+				local total = amount * price
+				if total < 0 then 
+					gui.set_text(node, 0)
+				else
+					gui.set_text(node, total)
+				end
 			end
 		elseif symbol == "minus" then 
 			amount = amount - 1
@@ -105,15 +76,13 @@ local function controls(symbol)
 				gui.set_text(gui.get_node("out"), "you don't have \n enough gold")
 			else 
 				gold = gold - total
-				amount = 0
 				gui.set_text(gui.get_node("amount"), 0)
-				-- if defsave.get("npc", select)
 				for i = 0,19 do
 					local slot = defsave.get("inventory", "s"..i)
 					if slot == "nul" then 
-						defsave.set("inventory", "s"..i, defsave.get("npc", select))
-						currency()
-						player()
+						-- defsave.set("inventory", "s"..i, defsave.get("npc", select))
+						-- inventory.currency()
+						-- inventory.items()
 						break
 					end
 				end
@@ -125,6 +94,7 @@ end
 local function select_shop(shop)
 	if shop == "weapon_store" then
 		weapon_store()
+		inventory.equipment()
 	end
 end
 
@@ -157,7 +127,7 @@ function on_input(self, action_id, action)
 				local set_node = gui.get_node("select")
 				gui.set_position(set_node, gui.get_position(node))
 				select = "ws"..i.."g"
-				amount = 0
+				selected = "ws"..i
 				gui.set_text(gui.get_node("amount"), 0)
 			end
 		end

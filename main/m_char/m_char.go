@@ -15,8 +15,8 @@ components {
   component: "/main/m_char/dialogue/dialogue.gui"
 }
 components {
-  id: "shop"
-  component: "/main/m_char/inventory/shop/shop.gui"
+  id: "shop_equipment"
+  component: "/main/m_char/inventory/shop/equipment/shop_equipment.gui"
 }
 embedded_components {
   id: "collisionobject"
