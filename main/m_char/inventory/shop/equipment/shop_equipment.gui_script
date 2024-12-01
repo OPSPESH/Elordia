@@ -112,7 +112,7 @@ function final(self)
 end
 
 function on_message(self, message_id, message, sender)
-	if message_id == hash("shop_show") then 
+	if message_id == hash("show_shop") then 
 		local msg = table.remove(message)
 		local node = gui.get_node("shop_ui")
 		gui.set_enabled(node, true)
@@ -143,5 +143,8 @@ function on_input(self, action_id, action)
 		elseif gui.pick_node(gui.get_node("buy"), action.x, action.y) then
 			controls("buy")
 		end
+	elseif action_id == hash("leave") then 
+		local node = gui.get_node("shop_ui")
+		gui.set_enabled(node, false)
 	end
 end

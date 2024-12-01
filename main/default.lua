@@ -22,11 +22,11 @@ return {
 
 	inventory = {
 		-- "inventory", sx = item, sxa = ammount
-		s0 = "wheat", -- top left
-		s0a = 10,
+		s0 = "nul", -- top left
+		s0a = 0,
 		s1 = "nul",
 		s1a = 0,
-		s2 = "tomato",
+		s2 = "nul",
 		s2a = 0,
 		s3 = "nul",
 		s3a = 0,
