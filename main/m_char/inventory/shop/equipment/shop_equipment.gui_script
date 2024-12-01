@@ -51,13 +51,27 @@ local function controls(symbol)
 				gold = gold - total
 				gui.set_text(gui.get_node("amount"), 0) 
 				if loaded_shop == "weapon_store" then 
-					-- local item_price = defsave.get("npc", selected.."g")
-					if selected == "ws2" then
-						-- local item_price = defsave.get(file, key)
-						defsave.set("inventory", "e2", "arrow")
-						local arrow = price + total
-						defsave.set("inventory", "arrow", arrow)
+					if selected == "ws0" then 
+						if defsave.get("inventory", "e6") == "nul" then 
+							defsave.set("inventory", "e6", "wooden_sword") 
+							gold = gold - 5
+						end
+					elseif selected == "ws1" then 
+						if defsave.get("inventory", "e7") == "nul" then 
+							defsave.set("inventory", "e7", "short_bow")
+							gold = gold - 10
+						elseif defsave.get("inventory", "e7") == "long_bow" then
+							gui.set_text(gui.get_node("out"), "you have a \n better weapon \n equipped")
+						end
+					elseif selected == "ws2" then
+						if total ~= 0 then 
+							local _arrow = defsave.get("inventory", "arrow")
+							defsave.set("inventory", "e2", "arrow")
+							local arrow = _arrow + total
+							defsave.set("inventory", "arrow", arrow)
+						end
 					end
+					gui.set_text(gui.get_node("out"), "thank you for \n your purchase")
 				end
 			end
 			inventory.equipment()

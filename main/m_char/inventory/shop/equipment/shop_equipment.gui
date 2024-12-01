@@ -7,6 +7,10 @@ fonts {
   name: "triforce_distance"
   font: "/assets/font/triforce/triforce_distance.font"
 }
+fonts {
+  name: "pixes_distance"
+  font: "/assets/font/Pixelify_Sans/pixes_distance.font"
+}
 textures {
   name: "items"
   texture: "/assets/items/items.atlas"
@@ -477,6 +481,7 @@ nodes {
   type: TYPE_TEXT
   font: "triforce_distance"
   id: "out"
+  line_break: true
   parent: "shop_ui"
   inherit_alpha: true
 }
