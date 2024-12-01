@@ -55,7 +55,7 @@ gamepad_trigger {
   action: "action"
 }
 gamepad_trigger {
-  input: GAMEPAD_LSTICK_DOWN
+  input: GAMEPAD_LSHOULDER
   action: "sprint"
 }
 gamepad_trigger {
