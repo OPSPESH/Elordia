@@ -7,10 +7,6 @@ fonts {
   name: "triforce_distance"
   font: "/assets/font/triforce/triforce_distance.font"
 }
-fonts {
-  name: "pixes_distance"
-  font: "/assets/font/Pixelify_Sans/pixes_distance.font"
-}
 textures {
   name: "items"
   texture: "/assets/items/items.atlas"

@@ -24,8 +24,6 @@ function init(self)
 	self.colliding = false
 
 	sprint = defsave.get("player", "sprint")
-
-	msg.post("#shop_equipment", "shop_show", {"weapon_store"})
 end
 
 function final(self)
