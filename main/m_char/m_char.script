@@ -1,7 +1,7 @@
 local l = require "main.loader"
 local defsave = require("defsave.defsave")
 local sprint
-local health = defsave.get("player", "health")
+-- local health = defsave.get("player", "health")
 
 function init(self)
 	defsave.appname = "Realms_of_elordia"
@@ -24,6 +24,8 @@ function init(self)
 	self.colliding = false
 
 	sprint = defsave.get("player", "sprint")
+
+	msg.post("#shop_equipment", "shop_show", {"weapon_store"})
 end
 
 function final(self)
@@ -176,14 +178,10 @@ function on_input(self, action_id, action)
 	if action_id == hash("inventory") and action.released then 
 		if self.inventory == 0 then 
 			msg.post("/inventory", "show")
-			timer.delay(0.5, false, function ()
-				self.inventory = 1	
-			end)
+			self.inventory = 1
 		elseif self.inventory == 1 then 
 			msg.post("/inventory", "hide")
-			timer.delay(0.5, false, function ()
-				self.inventory = 0
-			end)
+			self.inventory = 0
 		end
 	end
 	

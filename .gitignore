@@ -1,9 +1,7 @@
 /.internal
 /build
-/.vscode
-/degugger
 .DS_Store
 Thumbs.db
-debugger/debugger.lua
-debugger/debugger.script
 /.editor_settings
+manifest.private.der
+manifest.public.der

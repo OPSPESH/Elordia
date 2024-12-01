@@ -1,4 +1,6 @@
 font: "/assets/font/triforce/Triforce.ttf"
 material: "/builtins/fonts/font.material"
 size: 15
+shadow_blur: 0
+all_chars: true
 characters: " !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~"

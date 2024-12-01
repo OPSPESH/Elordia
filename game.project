@@ -5,7 +5,7 @@ custom_resources = /res
 dependencies#0 = https://github.com/britzl/defold-orthographic/archive/refs/tags/3.3.2.zip
 dependencies#1 = https://github.com/subsoap/defsave/archive/refs/tags/v1.2.6.zip
 dependencies#2 = https://github.com/paweljarosz/defarc/archive/refs/tags/v0.3.2.zip
-dependencies#3 = https://github.com/Insality/defold-printer/archive/refs/tags/1.2.0.zip
+dependencies#3 = https://github.com/paweljarosz/editor-scripts-ui-collection/archive/refs/tags/v1.1.zip
 
 [bootstrap]
 main_collection = /main/main.collectionc
@@ -30,7 +30,7 @@ velocity_threshold = 100.0
 max_tile_count = 100000
 
 [windows]
-app_icon = /assets/ico/helmet.ico
+app_icon = /assets/ico/endgame.ico
 
 [display]
 width = 1280
@@ -40,6 +40,6 @@ height = 720
 cssfile = /builtins/manifests/web/dark_theme.css
 
 [graphics]
-default_texture_min_filter = linear
+default_texture_min_filter = nearest
 default_texture_mag_filter = nearest
 

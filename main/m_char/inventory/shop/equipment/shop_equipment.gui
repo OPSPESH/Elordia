@@ -1,0 +1,489 @@
+script: "/main/m_char/inventory/shop/equipment/shop_equipment.gui_script"
+fonts {
+  name: "triforce_bitmap"
+  font: "/assets/font/triforce/triforce_bitmap.font"
+}
+fonts {
+  name: "triforce_distance"
+  font: "/assets/font/triforce/triforce_distance.font"
+}
+fonts {
+  name: "pixes_distance"
+  font: "/assets/font/Pixelify_Sans/pixes_distance.font"
+}
+textures {
+  name: "items"
+  texture: "/assets/items/items.atlas"
+}
+textures {
+  name: "inventory"
+  texture: "/assets/m_char/inventory/inventory.atlas"
+}
+textures {
+  name: "m_char"
+  texture: "/assets/m_char/m_char.atlas"
+}
+nodes {
+  position {
+    x: 640.0
+    y: 360.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/shop_equipment"
+  id: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "weapon_store"
+  parent: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -308.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "ws0"
+  parent: "weapon_store"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce_bitmap"
+  id: "ws0p"
+  parent: "ws0"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -236.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "ws1"
+  parent: "weapon_store"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce_bitmap"
+  id: "ws1p"
+  parent: "ws1"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -164.0
+    y: 144.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "ws2"
+  parent: "weapon_store"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce_bitmap"
+  id: "ws2p"
+  parent: "ws2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: 166.0
+    y: 287.5
+  }
+  size {
+    x: 50.0
+    y: 25.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "triforce_bitmap"
+  id: "gold"
+  parent: "shop_ui"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -308.0
+    y: 144.0
+  }
+  type: TYPE_BOX
+  texture: "inventory/select"
+  id: "select"
+  parent: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "controls"
+  parent: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -188.0
+    y: -260.0
+  }
+  size {
+    x: 56.0
+    y: 56.0
+  }
+  type: TYPE_BOX
+  id: "plus"
+  parent: "controls"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -340.0
+    y: -260.0
+  }
+  size {
+    x: 56.0
+    y: 56.0
+  }
+  type: TYPE_BOX
+  id: "minus"
+  parent: "controls"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -264.0
+    y: -260.0
+  }
+  size {
+    x: 96.0
+    y: 56.0
+  }
+  type: TYPE_TEXT
+  text: "0\n"
+  ""
+  font: "triforce_bitmap"
+  id: "amount"
+  line_break: true
+  parent: "controls"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -86.0
+    y: -260.0
+  }
+  size {
+    x: 108.0
+    y: 56.0
+  }
+  type: TYPE_BOX
+  id: "buy"
+  parent: "controls"
+  inherit_alpha: true
+  alpha: 0.0
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 222.0
+    y: 314.0
+  }
+  type: TYPE_BOX
+  texture: "items/blank"
+  id: "equipment "
+  parent: "shop_ui"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -227.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e0"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 30.0
+    y: -311.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e1"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -54.0
+    y: -311.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e2"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 7.333333
+    y: -7.333333
+  }
+  scale {
+    x: 0.25
+    y: 0.25
+  }
+  size {
+    x: 5.0
+    y: 5.0
+  }
+  type: TYPE_TEXT
+  text: "64\n"
+  ""
+  font: "triforce_bitmap"
+  id: "arrow_amount"
+  parent: "e2"
+  inherit_alpha: true
+}
+nodes {
+  position {
+    x: -138.0
+    y: -311.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e3"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -138.0
+    y: -227.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e4"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 31.0
+    y: -491.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e5"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -53.0
+    y: -491.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e6"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -137.0
+    y: -491.0
+  }
+  scale {
+    x: 3.0
+    y: 3.0
+  }
+  size {
+    x: 16.0
+    y: 16.0
+  }
+  type: TYPE_BOX
+  id: "e7"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -56.0
+    y: -229.0
+  }
+  scale {
+    x: 3.5
+    y: 3.5
+  }
+  type: TYPE_BOX
+  texture: "m_char/idle"
+  id: "m_char"
+  parent: "equipment "
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -199.5
+    y: 298.0
+  }
+  scale {
+    x: 0.9
+    y: 0.9
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_TEXT
+  font: "triforce_distance"
+  id: "out"
+  line_break: true
+  parent: "shop_ui"
+  inherit_alpha: true
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

@@ -23,26 +23,6 @@ key_trigger {
   action: "action"
 }
 key_trigger {
-  input: KEY_LALT
-  action: "test"
-}
-key_trigger {
-  input: KEY_UP
-  action: "up"
-}
-key_trigger {
-  input: KEY_DOWN
-  action: "down"
-}
-key_trigger {
-  input: KEY_LEFT
-  action: "left"
-}
-key_trigger {
-  input: KEY_RIGHT
-  action: "right"
-}
-key_trigger {
   input: KEY_E
   action: "inventory"
 }

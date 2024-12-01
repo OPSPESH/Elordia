@@ -1,0 +1,147 @@
+local defsave = require("defsave.defsave")
+local item = require("main.m_char.inventory.items")
+local inventory = require("main.m_char.inventory.inventory")
+local amount = 0
+local loaded_shop
+local selected
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+	defsave.appname = "Realms_of_elordia"
+	defsave.default_data = require("main.default")
+	defsave.load("npc")
+	defsave.load("inventory")
+end
+
+local function controls(symbol)
+	local node = gui.get_node("amount")
+	local price = defsave.get("npc", selected.."g")
+	local gold = defsave.get("inventory", "gold")
+
+	if price ~= nil then 
+		if symbol == "plus" then 
+			if loaded_shop == "weapon_store" then
+				if selected == "ws2" then 
+					amount = amount + 1
+					local total = amount * price
+					if total < 0 then 
+						gui.set_text(node, 0)
+					else
+						gui.set_text(node, total)
+					end
+				end
+			end
+
+		elseif symbol == "minus" then
+			if loaded_shop == "weapon_store" then
+				amount = amount - 1
+				local total = amount * price
+				if total < 0 then 
+					gui.set_text(node, 0)
+				else
+					gui.set_text(node, total)
+				end
+			end
+
+		elseif symbol == "buy" then
+			local total = amount * price
+			if total > gold then 
+				gui.set_text(gui.get_node("out"), "you don't have \n enough gold")
+			else
+				gold = gold - total
+				gui.set_text(gui.get_node("amount"), 0) 
+				if loaded_shop == "weapon_store" then 
+					if selected == "ws0" then 
+						if defsave.get("inventory", "e6") == "nul" then 
+							defsave.set("inventory", "e6", "wooden_sword") 
+							gold = gold - 5
+						end
+					elseif selected == "ws1" then 
+						if defsave.get("inventory", "e7") == "nul" then 
+							defsave.set("inventory", "e7", "short_bow")
+							gold = gold - 10
+						elseif defsave.get("inventory", "e7") == "long_bow" then
+							gui.set_text(gui.get_node("out"), "you have a \n better weapon \n equipped")
+						end
+					elseif selected == "ws2" then
+						if total ~= 0 then 
+							local _arrow = defsave.get("inventory", "arrow")
+							defsave.set("inventory", "e2", "arrow")
+							local arrow = _arrow + total
+							defsave.set("inventory", "arrow", arrow)
+						end
+					end
+					gui.set_text(gui.get_node("out"), "thank you for \n your purchase")
+				end
+			end
+			inventory.equipment()
+			defsave.set("inventory", "gold", gold)
+			inventory.currency(defsave.get("inventory", "gold"))
+			amount = 0
+		end
+	end
+end 
+
+local function setup(shop)
+	inventory.equipment()
+	inventory.currency(defsave.get("inventory", "gold"))
+
+	loaded_shop = shop
+	if shop == "weapon_store" then 
+		for i = 0,2 do 
+			local node = gui.get_node("ws"..i)
+			local slot = defsave.get("npc", "ws"..i)
+			gui.set_texture(node, "items")
+			gui.play_flipbook(node, item.equipment(slot))
+		end
+
+		for i = 0,2 do 
+			local node = gui.get_node("ws"..i.."p")
+			local slot = defsave.get("npc", "ws"..i.."g")
+			if slot == 0 then
+				gui.set_text(node, "")
+			else 
+				gui.set_text(node, slot)
+			end
+		end
+	end
+end
+
+function final(self)
+	msg.post(".", "release_input_focus")
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("shop_show") then 
+		local msg = table.remove(message)
+		local node = gui.get_node("shop_ui")
+		gui.set_enabled(node, true)
+		setup(msg)
+		loaded_shop = msg
+	end
+end
+
+function on_input(self, action_id, action)
+	if action_id == hash("touch") and action.released then 
+		if loaded_shop == "weapon_store" then 
+			for i = 0,2 do
+				local node = gui.get_node("ws"..i)
+				if gui.pick_node(node, action.x, action.y) then 
+					local set_node = gui.get_node("select")
+					gui.set_position(set_node, gui.get_position(node))
+					selected = "ws"..i
+					gui.set_text(gui.get_node("amount"), 0)
+					gui.set_text(gui.get_node("out"), "")
+				end
+			end
+		end
+
+		if gui.pick_node(gui.get_node("plus"), action.x, action.y) then
+			controls("plus")
+		elseif gui.pick_node(gui.get_node("minus"), action.x, action.y) then
+			controls("minus")
+		elseif gui.pick_node(gui.get_node("buy"), action.x, action.y) then
+			controls("buy")
+		end
+	end
+end

@@ -8,11 +8,15 @@ components {
 }
 components {
   id: "inventory"
-  component: "/main/m_char/inventory/inventory.gui"
+  component: "/main/m_char/inventory/player/inventory.gui"
 }
 components {
   id: "dialogue"
   component: "/main/m_char/dialogue/dialogue.gui"
+}
+components {
+  id: "shop_equipment"
+  component: "/main/m_char/inventory/shop/equipment/shop_equipment.gui"
 }
 embedded_components {
   id: "collisionobject"
