@@ -1,5 +1,4 @@
-Credits
-___________________________________________________________
+# Credits
 
 https://glionox.itch.io/items16 -- items
 https://etahoshi.itch.io/minimal-fantasy-gui-by-eta -- ui
