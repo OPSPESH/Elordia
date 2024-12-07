@@ -22,7 +22,7 @@ local function cam(self)
 		camera.set_zoom(nil, 2.5)
 	elseif self.collection == "#armour_forrest" then
 		camera.follow(nil, "/m_char")
-		camera.set_zoom(nil, 2)
+		camera.set_zoom(nil, 2.5)
 	end
 
 end
