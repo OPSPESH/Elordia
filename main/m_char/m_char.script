@@ -150,6 +150,14 @@ function on_message(self, message_id, message, sender)
 				self.colliding = false
 			end
 		end
+
+		if message.other_group == hash("armour_man") then
+			if message.enter == true then 
+				self.colliding = "armour_man"
+			else 
+				self.colliding = false
+			end
+		end
 	end
 
 	if message_id == hash("force_walk") then
@@ -212,6 +220,9 @@ function on_input(self, action_id, action)
 			elseif self.colliding == "weapon_store_shopkeeper" then
 				self.dialogue = 1
 				msg.post("/m_char#dialogue", "play", {"weapon_store_shopkeeper"})
+			elseif self.colliding == "armour_man" then
+				self.dialogue = 1
+				msg.post("#dialogue", "play", {"armour_man"})
 			end
 			self.colliding = false
 		end

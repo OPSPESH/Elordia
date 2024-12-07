@@ -17,7 +17,9 @@
                 "e7a67f7a-7ea0-4586-be65-2ea582cf1f76",
                 "e25353c2-24a3-44d0-b862-e27a21d972d7",
                 "78d9760a-105b-4843-b68e-526268487024",
-                "a580771c-b4d9-46db-8cc5-631954eb1985"
+                "a580771c-b4d9-46db-8cc5-631954eb1985",
+                "76567a35-71e0-4cb7-8064-10248e37da96",
+                "aad81404-7491-40e3-930f-cfc138f3719b"
             ],
             "connections": [
                 "1df389d2-eedf-4c3b-bc54-f26f987c976c",
@@ -27,9 +29,11 @@
                 "213c7129-4595-4f1b-acc0-6f6df7ed4b94",
                 "61513e61-0376-4e61-8911-acb00fed0b80",
                 "2e022523-210e-435f-a04e-414d83df6f81",
-                "5b9c5549-e5a6-400a-8f50-ededc999e000",
                 "47c82534-b6cf-472f-913a-3f31bf1515be",
-                "071b0041-d052-45db-84cc-37d0e0492cb6"
+                "071b0041-d052-45db-84cc-37d0e0492cb6",
+                "3fd4e3c6-7baf-4a6a-b6fa-6497869639a2",
+                "5cec8697-1fb3-412a-b783-915cd36bef29",
+                "24fa77c9-46e6-46e5-a5e3-dfdf9caa8454"
             ]
         },
         "2ad15ff6-f2ba-4f1d-9d9d-68938c683d7e": {
@@ -87,7 +91,7 @@
         "b8ae161e-efc4-4b4a-b747-c53e2e27d374": {
             "theme": "default",
             "title": "<p>4<\/p>",
-            "content": "<p>Ahhh. Just as I thought. We must procced anyway  <\/p>",
+            "content": "<p>Ahhh. Just as I thought.<\/p>",
             "outputs": [
                 "61513e61-0376-4e61-8911-acb00fed0b80"
             ],
@@ -109,7 +113,7 @@
             "title": "<p>5<\/p>",
             "content": "<p>Well. We must proceed. <\/p>",
             "outputs": [
-                "5b9c5549-e5a6-400a-8f50-ededc999e000"
+                "3fd4e3c6-7baf-4a6a-b6fa-6497869639a2"
             ],
             "autoHeight": true,
             "components": []
@@ -117,7 +121,7 @@
         "78d9760a-105b-4843-b68e-526268487024": {
             "theme": "default",
             "title": "<p>6<\/p>",
-            "content": "<p>Here have this armour. It will help you on your journey <\/p>",
+            "content": "<p>And have this armour. It will help you on your journey <\/p>",
             "outputs": [
                 "071b0041-d052-45db-84cc-37d0e0492cb6"
             ],
@@ -131,6 +135,26 @@
             "outputs": [],
             "autoHeight": true,
             "components": []
+        },
+        "76567a35-71e0-4cb7-8064-10248e37da96": {
+            "autoHeight": true,
+            "title": "<p><\/p>",
+            "theme": "default",
+            "components": [],
+            "content": "<p>You must go to the shop in you village an buy a sword.<\/p>",
+            "outputs": [
+                "5cec8697-1fb3-412a-b783-915cd36bef29"
+            ]
+        },
+        "aad81404-7491-40e3-930f-cfc138f3719b": {
+            "autoHeight": true,
+            "title": "",
+            "theme": "default",
+            "components": [],
+            "content": "<p>Here this gold should cover it <\/p>",
+            "outputs": [
+                "24fa77c9-46e6-46e5-a5e3-dfdf9caa8454"
+            ]
         }
     },
     "connections": {
@@ -201,15 +225,6 @@
             "targetFace": "left",
             "targetType": "elements"
         },
-        "5b9c5549-e5a6-400a-8f50-ededc999e000": {
-            "type": "Bezier",
-            "label": "<p>Next<\/p>",
-            "theme": "default",
-            "sourceid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
-            "targetid": "78d9760a-105b-4843-b68e-526268487024",
-            "sourceType": "elements",
-            "targetType": "elements"
-        },
         "47c82534-b6cf-472f-913a-3f31bf1515be": {
             "type": "Bezier",
             "label": "<p>Next<\/p>",
@@ -228,6 +243,34 @@
             "targetid": "a580771c-b4d9-46db-8cc5-631954eb1985",
             "sourceType": "elements",
             "targetType": "elements"
+        },
+        "3fd4e3c6-7baf-4a6a-b6fa-6497869639a2": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "76567a35-71e0-4cb7-8064-10248e37da96",
+            "label": null,
+            "sourceid": "e25353c2-24a3-44d0-b862-e27a21d972d7",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "5cec8697-1fb3-412a-b783-915cd36bef29": {
+            "targetType": "elements",
+            "type": "Bezier",
+            "targetid": "aad81404-7491-40e3-930f-cfc138f3719b",
+            "label": "<p>Next<\/p>",
+            "sourceid": "76567a35-71e0-4cb7-8064-10248e37da96",
+            "theme": "default",
+            "sourceType": "elements"
+        },
+        "24fa77c9-46e6-46e5-a5e3-dfdf9caa8454": {
+            "sourceType": "elements",
+            "label": "<p>Next<\/p>",
+            "sourceid": "aad81404-7491-40e3-930f-cfc138f3719b",
+            "targetid": "78d9760a-105b-4843-b68e-526268487024",
+            "targetFace": "left",
+            "targetType": "elements",
+            "theme": "default",
+            "type": "Bezier"
         }
     },
     "jumpers": {},

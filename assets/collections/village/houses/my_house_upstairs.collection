@@ -68,7 +68,7 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
-  "      x: 192.0\\n"
+  "      x: 192.2\\n"
   "      y: 96.0\\n"
   "    }\\n"
   "    rotation {\\n"
@@ -79,8 +79,8 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
-  "      x: 164.0\\n"
-  "      y: 136.0\\n"
+  "      x: 162.2\\n"
+  "      y: 135.7\\n"
   "    }\\n"
   "    rotation {\\n"
   "    }\\n"
@@ -101,7 +101,7 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
-  "      x: 11.0\\n"
+  "      x: 10.6\\n"
   "      y: 88.0\\n"
   "    }\\n"
   "    rotation {\\n"
@@ -135,7 +135,7 @@ embedded_instances {
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
   "      x: 24.9\\n"
-  "      y: 72.0\\n"
+  "      y: 75.5\\n"
   "    }\\n"
   "    rotation {\\n"
   "    }\\n"
@@ -145,8 +145,8 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
-  "      x: 47.0\\n"
-  "      y: 94.0\\n"
+  "      x: 46.3\\n"
+  "      y: 93.8\\n"
   "    }\\n"
   "    rotation {\\n"
   "    }\\n"
@@ -156,8 +156,8 @@ embedded_instances {
   "  shapes {\\n"
   "    shape_type: TYPE_BOX\\n"
   "    position {\\n"
-  "      x: 18.0\\n"
-  "      y: 95.0\\n"
+  "      x: 17.7\\n"
+  "      y: 95.2\\n"
   "    }\\n"
   "    rotation {\\n"
   "    }\\n"
@@ -189,7 +189,7 @@ embedded_instances {
   "  data: 18.44884\\n"
   "  data: 10.0\\n"
   "  data: 23.36905\\n"
-  "  data: 2.253188\\n"
+  "  data: 3.5\\n"
   "  data: 10.0\\n"
   "  data: 2.272855\\n"
   "  data: 18.245031\\n"
@@ -203,13 +203,5 @@ embedded_instances {
   ""
   position {
     z: -1.0
-  }
-}
-embedded_instances {
-  id: "go"
-  data: ""
-  position {
-    x: 133.0
-    y: 37.0
   }
 }

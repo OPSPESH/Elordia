@@ -18,7 +18,7 @@ textures {
 nodes {
   position {
     x: 640.0
-    y: 362.0
+    y: 360.0
   }
   type: TYPE_BOX
   texture: "inventory/inventory"
@@ -917,7 +917,7 @@ nodes {
   text: "64\n"
   ""
   font: "triforce"
-  id: "arrow"
+  id: "arrow_amount"
   parent: "e2"
   inherit_alpha: true
 }
@@ -943,7 +943,7 @@ nodes {
 nodes {
   position {
     x: -138.0
-    y: -227.0
+    y: -226.0
   }
   scale {
     x: 3.0
@@ -1031,50 +1031,6 @@ nodes {
   parent: "equipment "
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: -653.0
-  }
-  type: TYPE_BOX
-  texture: "items/blank"
-  id: "currency"
-  parent: "inventory"
-  inherit_alpha: true
-  size_mode: SIZE_MODE_AUTO
-}
-nodes {
-  position {
-    x: 176.0
-    y: 203.0
-  }
-  size {
-    x: 50.0
-    y: 25.0
-  }
-  type: TYPE_TEXT
-  text: "0"
-  font: "triforce"
-  id: "gold"
-  parent: "currency"
-  inherit_alpha: true
-}
-nodes {
-  position {
-    x: 266.0
-    y: 203.0
-  }
-  size {
-    x: 50.0
-    y: 25.0
-  }
-  type: TYPE_TEXT
-  text: "0"
-  font: "triforce"
-  id: "star_shard"
-  parent: "currency"
-  inherit_alpha: true
-  text_leading: 0.0
 }
 nodes {
   type: TYPE_BOX
@@ -1219,6 +1175,22 @@ nodes {
   parent: "inventory"
   inherit_alpha: true
   size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: -477.0
+    y: 204.0
+  }
+  size {
+    x: 50.0
+    y: 25.0
+  }
+  type: TYPE_TEXT
+  text: "0"
+  font: "triforce"
+  id: "gold"
+  parent: "inventory"
+  inherit_alpha: true
 }
 material: "/builtins/materials/gui.material"
 adjust_reference: ADJUST_REFERENCE_PARENT

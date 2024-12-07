@@ -21,6 +21,7 @@ local function cam(self)
 		camera.unfollow(nil)
 		camera.set_zoom(nil, 2.5)
 	elseif self.collection == "#armour_forrest" then
+		camera.follow(nil, "/m_char")
 		camera.set_zoom(nil, 2)
 	end
 
@@ -28,7 +29,6 @@ end
 function init(self)
 	defsave.appname = "Realms_of_elordia"
 	defsave.load("camera")
-	defsave.load("npc")
 
 	self.current_screen = defsave.get("player", "collection")
 	self.ids = collectionfactory.create(self.current_screen)
@@ -42,8 +42,6 @@ function on_message(self, message_id, message, sender)
 		self.collection = l.get_collection()
 		if self.collection == nil then 
 			return
-			print(self.collection)
-
 		elseif self.collection == "#armour_forrest" then
 			-- fades the screen
 			msg.post("/transition#transition", "play")

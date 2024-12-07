@@ -79,7 +79,7 @@ return {
 		e6 = "nul", -- sword
 		e7 = "nul", -- bow
 		arrow = 0,
-		gold = 1000,
+		gold = 0,
 		starshard = 0,
 	},
 
