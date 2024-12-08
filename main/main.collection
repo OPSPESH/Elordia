@@ -68,6 +68,12 @@ embedded_instances {
   "  data: \"prototype: \\\"/assets/collections/village/armour_forrest.collection\\\"\\n"
   "\"\n"
   "}\n"
+  "embedded_components {\n"
+  "  id: \"training_ground\"\n"
+  "  type: \"collectionfactory\"\n"
+  "  data: \"prototype: \\\"/assets/collections/village/training_ground.collection\\\"\\n"
+  "\"\n"
+  "}\n"
   ""
 }
 embedded_instances {

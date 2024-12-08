@@ -5,6 +5,7 @@ return {
 		my_house_upstairs = vmath.vector3(133,32,0.9995),
 		weapon_store = vmath.vector3(46, 10, 0.9995),
 		armour_forrest = vmath.vector3(242, 237, 0.9),
+		training_ground = vmath.vector3(363, 653, 0.9)
 	},
 
 	camera = {

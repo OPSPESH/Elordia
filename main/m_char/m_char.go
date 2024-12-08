@@ -34,6 +34,7 @@ embedded_components {
   "mask: \"weapon_store_shopkeeper\"\n"
   "mask: \"armour_forrest\"\n"
   "mask: \"armour_man\"\n"
+  "mask: \"training_ground\"\n"
   "embedded_collision_shape {\n"
   "  shapes {\n"
   "    shape_type: TYPE_BOX\n"

@@ -158,6 +158,15 @@ function on_message(self, message_id, message, sender)
 				self.colliding = false
 			end
 		end
+
+		if message.other_group == hash("training_ground") then
+			if message.enter == true then
+				l.give_collection("#training_ground")
+				self.colliding = "load_world"
+			else
+				self.colliding = false
+			end
+		end
 	end
 
 	if message_id == hash("force_walk") then

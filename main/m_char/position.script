@@ -29,6 +29,8 @@ function on_message(self, message_id, message, sender)
 			go.set_position(defsave.get("position", "weapon_store"))
 		elseif collection == "armour_forrest" then 
 			go.set_position(defsave.get("position", "armour_forrest"))
+		elseif collection == "training_ground" then 
+			go.set_position(defsave.get("position", "training_ground"))
 		end
 	end
 end
