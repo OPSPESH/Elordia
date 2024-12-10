@@ -1,0 +1,90 @@
+animations {
+  id: "npc_o_idle"
+  images {
+    image: "/assets/npc/npc_0/npc_0_idle1.png"
+  }
+  images {
+    image: "/assets/npc/npc_0/npc_0_idle2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 3
+}
+animations {
+  id: "old_man_1_left"
+  images {
+    image: "/assets/npc/old_man_1/old_man_left1.png"
+  }
+  images {
+    image: "/assets/npc/old_man_1/old_man_left2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 2
+}
+animations {
+  id: "npc_1_idle"
+  images {
+    image: "/assets/npc/npc_1/idle/npc_1_idle1.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/idle/npc_1_idle2.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 3
+}
+animations {
+  id: "npc_1_up"
+  images {
+    image: "/assets/npc/npc_1/up/npc_1_up1.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/up/npc_1_up2.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/up/npc_1_up3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "npc_1_down"
+  images {
+    image: "/assets/npc/npc_1/down/npc_1_down1.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/down/npc_1_down2.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/down/npc_1_down3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "npc_1_left"
+  images {
+    image: "/assets/npc/npc_1/left/npc_1_left1.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/left/npc_1_left2.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/left/npc_1_left3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+animations {
+  id: "npc_1_right"
+  images {
+    image: "/assets/npc/npc_1/right/npc_1_right1.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/right/npc_1_right2.png"
+  }
+  images {
+    image: "/assets/npc/npc_1/right/npc_1_right3.png"
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 6
+}
+extrude_borders: 2

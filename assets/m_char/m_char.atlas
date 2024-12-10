@@ -102,7 +102,6 @@ animations {
   images {
     image: "/assets/m_char/m_char/attack1/m_char_attack_6.png"
   }
-  playback: PLAYBACK_LOOP_FORWARD
   fps: 10
 }
 animations {
@@ -125,7 +124,6 @@ animations {
   images {
     image: "/assets/m_char/m_char/attack2/m_char_attack_7.png"
   }
-  playback: PLAYBACK_LOOP_FORWARD
   fps: 9
 }
 animations {

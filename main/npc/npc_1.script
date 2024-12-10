@@ -1,0 +1,98 @@
+local ai = require("main.npc.npc")
+
+local function move(self, result)
+	if result == "move" then
+		local rand = math.random(0,8)
+		if rand == 1 then
+			ai.movement(self, 0, 1)
+		elseif rand == 2 then
+			ai.movement(self, 1, 1)
+		elseif rand == 3 then
+			ai.movement(self, 1, 0)
+		elseif rand == 4 then
+			ai.movement(self, 1, -1)
+		elseif rand == 5 then
+			ai.movement(self, 0, -1)
+		elseif rand == 6 then
+			ai.movement(self, -1, -1)
+		elseif rand == 7 then
+			ai.movement(self, -1, 0)
+		elseif rand == 8 then
+			ai.movement(self, -1, 1)
+		end
+	elseif result == "stop" then
+		ai.movement(self, 0, 0)
+	end
+end
+
+local function up(self)
+	local rand = math.random(0,100)
+	if rand > 10 then
+		self.num = self.num + 1
+		if self.num == 100 then
+			self.num = 0
+			move(self, "move")
+		end
+	end
+end
+
+function init(self)
+	self.speed = 75
+	self.current_anim = nil
+	self.dir = vmath.vector3()
+	self.correction = vmath.vector3()
+	self.colliding = false
+	self.num = 0
+end
+
+function update(self, dt)
+	-- check whether the charicter is colliding with anything every tick --
+
+	if vmath.length_sqr(self.dir) > 1 then
+		self.dir = vmath.normalize(self.dir)
+	end
+
+	self.correction = vmath.vector3()
+
+	local p = go.get_position()
+	go.set_position(p + self.dir * self.speed * dt)
+
+	-- ai.animation(self)
+
+	self.dir = vmath.vector3()
+
+	up(self)
+
+	local anim = hash("npc_1_idle")
+
+	if self.speed == 75 then
+		if self.dir.x > 0 then 
+			anim = hash("npc_1_right")
+		elseif self.dir.x < 0 then 
+			anim = hash("npc_1_left")
+		elseif self.dir.y < 0 then 
+			anim = hash("npc_1_up")
+		elseif self.dir.y > 0 then 
+			anim = hash("npc_1_down")
+		end
+	end
+
+	-- actually plays the animation
+	if anim ~= self.current_anim then
+		sprite.play_flipbook("#sprite", anim)
+		self.current_anim = anim
+	end
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash("contact_point_response") and message.other_group == hash("barrier") then
+		if message.distance > 0 then
+			local proj = vmath.project(self.correction, message.normal * message.distance)
+			if proj < 1 then
+				local comp = (message.distance - message.distance * proj) * message.normal
+				go.set_position(go.get_position() + comp)
+				self.correction = self.correction + comp
+			end
+		end
+	end
+end
